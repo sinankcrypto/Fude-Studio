@@ -1,10 +1,11 @@
+import Container from "./components/common/Container";
+import Footer from "./components/layout/Footer";
+
 function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-black">
-      <h1 className="text-5xl font-bold text-white">
-        Tailwind is working!
-      </h1>
-    </div>
+    <Container>
+      <Footer/>
+    </Container>
   );
 }
 

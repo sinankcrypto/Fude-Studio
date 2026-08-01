@@ -1,12 +1,12 @@
 const variants = {
   primary:
-    "bg-black text-white hover:bg-neutral-800",
+    "bg-dark text-text-light hover:opacity-80",
 
   secondary:
-    "border border-black text-black hover:bg-black hover:text-white",
+    "border border-border text-text hover:bg-dark hover:text-text-light",
 
   ghost:
-    "text-black hover:opacity-60",
+    "text-text hover:opacity-60",
 };
 
 function Button({
@@ -21,15 +21,7 @@ function Button({
         inline-flex
         items-center
         justify-center
-        gap-2
-        rounded-pill
-        px-6
-        py-3
-        text-sm
-        font-medium
-        uppercase
-        tracking-wide
-        transition-colors
+        transition-opacity
         duration-300
         ${variants[variant]}
         ${className}
