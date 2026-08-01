@@ -5,24 +5,21 @@
      COLORS
      ======================================== */
 
-  --color-background: #f2f2f0;
-  --color-background-dark: #252525;
+  --color-light: #F0F0F0;
+  --color-dark: #2A2A2Aff;
 
-  --color-foreground: #111111;
-  --color-foreground-dark: #f2f2f0;
+  --color-text: #2A2A2A;
+  --color-text-light: #F0F0F0;
 
-  --color-muted: #6b6b6b;
-  --color-border: #d1d1cf;
-
-  --color-white: #ffffff;
-  --color-black: #111111;
+  --color-muted: #717171;
+  --color-border: ##3E3A3A;
 
 
   /* ========================================
      TYPOGRAPHY
      ======================================== */
 
-  --font-sans: "YOUR_FIGMA_FONT", sans-serif;
+  --font-sans: Sequel Sansf, sans-serif;
 
 
   /* ========================================
