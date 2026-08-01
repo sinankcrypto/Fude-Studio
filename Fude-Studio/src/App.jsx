@@ -1,11 +1,16 @@
 import Container from "./components/common/Container";
-import Footer from "./components/layout/Footer";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar/Navbar";
+import Video from "./components/Video";
 
 function App() {
   return (
     <Container>
-      <Footer/>
+      <Navbar />
+      <Hero />
+      <Video />
     </Container>
+
   );
 }
 
