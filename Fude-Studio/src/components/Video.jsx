@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import videoImage from "../assets/images/video-image.jpeg";
 
 export default function Video() {
     const containerRef = useRef(null);
@@ -24,7 +25,7 @@ export default function Video() {
                 className="absolute inset-0 w-full h-[120%] -top-[10%]"
             >
                 <motion.img 
-                    src="/skincare_hero.png" 
+                    src={videoImage} 
                     alt="Skincare Hero Background" 
                     className="w-full h-full object-cover brightness-[0.95] select-none"
                     initial={{ scale: 1.1, opacity: 0 }}

@@ -1,6 +1,10 @@
 import { useState } from "react";
 // import { ArrowUpRight, ChevronRight } from "lucide-react";
 
+import jojoImage from "../assets/images/JO-AND-JO-image.jpeg";
+import breenImage from "../assets/images/Breen-image.jpeg";
+import chemzolImage from "../assets/images/Chemzol-image.jpeg";
+import xImage from "../assets/images/X-image.jpeg";
 
 const pageContent = {
     eyebrow: "Selected work",
@@ -14,29 +18,25 @@ const projects = [
     {
         title: "Jojo",
         category: "Brand identity · Culture",
-        image:
-            "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85",
+        image: jojoImage,
         accent: "#6d182d",
     },
     {
         title: "Breen",
         category: "Strategy · Hospitality",
-        image:
-            "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85",
+        image: breenImage,
         accent: "#b78d68",
     },
     {
         title: "Chemzol",
         category: "Packaging · Industry",
-        image:
-            "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1200&q=85",
+        image: chemzolImage,
         accent: "#1e83c8",
     },
     {
         title: "X marks",
         category: "Digital · Technology",
-        image:
-            "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=85",
+        image: xImage,
         accent: "#241453",
     },
 ];
