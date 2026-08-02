@@ -31,16 +31,46 @@ export const services = [
     {
         number: "02",
         title: "Graphic design",
-        columns: [],
+        columns: [
+            [
+                { title: "Brand strategy", description: lorem },
+                { title: "Corporate identity & stationery", description: lorem },
+                { title: "Packaging & product mock-ups", description: lorem },
+            ],
+            [
+                { title: "Logo & brand identity design", description: lorem },
+                { title: "Digital brand asset kit", description: lorem },
+            ],
+        ],
     },
     {
         number: "03",
         title: "Web design",
-        columns: [],
+        columns: [
+            [
+                { title: "Brand strategy", description: lorem },
+                { title: "Corporate identity & stationery", description: lorem },
+                { title: "Packaging & product mock-ups", description: lorem },
+            ],
+            [
+                { title: "Logo & brand identity design", description: lorem },
+                { title: "Digital brand asset kit", description: lorem },
+            ],
+        ],
     },
     {
         number: "04",
         title: "Motion & video",
-        columns: [],
+        columns: [
+            [
+                { title: "Brand strategy", description: lorem },
+                { title: "Corporate identity & stationery", description: lorem },
+                { title: "Packaging & product mock-ups", description: lorem },
+            ],
+            [
+                { title: "Logo & brand identity design", description: lorem },
+                { title: "Digital brand asset kit", description: lorem },
+            ],
+        ],
     },
 ];

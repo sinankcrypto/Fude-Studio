@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 
 const DesktopMenu = () => {
     return (
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center  gap-8">
             {NAVBAR_OPTIONS.map((option, index) => (
                 <motion.a
                     key={index}
@@ -12,7 +12,7 @@ const DesktopMenu = () => {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 + index * 0.08, duration: 0.4, ease: "easeOut" }}
-                    className="text-xs font-semibold tracking-widest text-[#2A2A2A]/70 hover:text-[#2A2A2A] transition-colors duration-200 uppercase relative py-2 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-[#2A2A2A] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+                    className="text-[14px] font-extralight tracking-tight text-[#2A2A2A] hover:text-[#2A2A2A] transition-colors duration-200 uppercase relative py-2 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-[#2A2A2A] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
                 >
                     {option.name}
                 </motion.a>
@@ -48,21 +48,21 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <motion.header 
+        <motion.header
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="sticky top-0 z-50 bg-[#F0F0F0]/90 backdrop-blur-md border-b border-[#2A2A2A]/5"
+            className="sticky top-0 z-50 bg-[#F0F0F0]/90 backdrop-blur-md border-b-2 border-[#2A2A2A]/5"
         >
             <div className="mx-auto w-full px-6 lg:px-16 flex items-center justify-between h-20 md:h-24">
                 {/* Logo */}
-                <motion.img 
-                    src="src/assets/logo.png" 
-                    alt="Fude Logo" 
+                <motion.img
+                    src="src/assets/logo.png"
+                    alt="Fude Logo"
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="w-[88px] h-[30px] object-contain cursor-pointer" 
+                    className="w-[88px] h-[30px] object-contain cursor-pointer"
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 />
                 <DesktopMenu />
@@ -86,7 +86,7 @@ export default function Navbar() {
                                     key={index}
                                     href={`#${option.link}`}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-sm font-semibold tracking-widest text-[#2A2A2A]/70 hover:text-[#2A2A2A] transition-colors duration-200 uppercase py-1 border-b border-[#2A2A2A]/10"
+                                    className="text-sm font-light tracking-tight text-[#2A2A2A] hover:text-[#2A2A2A] transition-colors duration-200 uppercase py-1 border-b border-[#2A2A2A]/10"
                                 >
                                     {option.name}
                                 </a>

@@ -5,7 +5,7 @@ export default function Index() {
     return (
         <div className="min-h-screen bg-dark text-white">
             <main className="mx-auto max-w-[1440px] px-6 py-16 sm:px-10 md:px-[60px] md:py-20">
-                <h1 className="max-w-4xl text-3xl uppercase leading-[1.1] tracking-tight sm:text-4xl md:text-[40px]">
+                <h1 className="max-w-[918px] text-3xl uppercase leading-[1.1] tracking-tight sm:text-4xl md:text-[40px]">
                     {heroContent.text}
                     <span className="underline underline-offset-4">
                         {heroContent.linkText}
