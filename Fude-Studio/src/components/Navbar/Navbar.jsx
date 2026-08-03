@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NAVBAR_OPTIONS } from "../../constants/navbar";
 import { motion, AnimatePresence } from "motion/react";
+import logo from "../../assets/logo.png";
 
 const DesktopMenu = () => {
     return (
@@ -57,7 +58,7 @@ export default function Navbar() {
             <div className="mx-auto w-full px-6 lg:px-16 flex items-center justify-between h-20 md:h-24">
                 {/* Logo */}
                 <motion.img
-                    src="src/assets/logo.png"
+                    src={logo}
                     alt="Fude Logo"
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
