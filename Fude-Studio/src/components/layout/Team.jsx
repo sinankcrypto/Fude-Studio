@@ -11,7 +11,7 @@ export default function Team() {
   ];
 
   return (
-    <section id="team" className="w-full px-6 py-16 lg:px-16 lg:py-24 overflow-hidden">
+    <section id="team" className="w-full px-6 py-16 lg:px-16 lg:py-24 overflow-hidden bg-[#F0F0F0]">
       {/* Section Header */}
       <h2 className="text-4xl font-normal uppercase leading-[1.1] tracking-[-0.03em] text-text sm:text-5xl">
         {TEAM_SECTION.title}

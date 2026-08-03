@@ -7,7 +7,7 @@ export default function Clients() {
   const row2Duplicated = [...CLIENTS_ROW_2, ...CLIENTS_ROW_2, ...CLIENTS_ROW_2, ...CLIENTS_ROW_2];
 
   return (
-    <section id="clients" className="w-full px-6 py-16 lg:px-16 lg:py-24 overflow-hidden">
+    <section id="clients" className="w-full px-6 py-16 lg:px-16 lg:py-24 overflow-hidden bg-[#EDEDED]">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12 lg:mb-16">
         <div className="md:w-1/3">
