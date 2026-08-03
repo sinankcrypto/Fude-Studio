@@ -48,14 +48,6 @@ export default function Portfolio() {
                                 className="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/25" />
-                            {index === 0 && (
-                                <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden bg-[#6d182d]/45">
-                                    <span className="absolute whitespace-nowrap font-sans text-[clamp(4.5rem,10vw,10rem)] font-medium uppercase leading-none tracking-[-0.1em] text-[#f7ead7] opacity-90">
-                                        JOJO
-                                    </span>
-                                    <span className="relative mt-6 h-[42%] w-[25%] overflow-hidden rounded-t-[50%] bg-[#d4b08b]/80 mix-blend-multiply" />
-                                </div>
-                            )}
                             <div className="absolute inset-x-0 bottom-0 flex translate-y-2 items-end justify-between p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 sm:p-5">
                                 <div className="text-white">
                                     <p className="font-sans text-2xl tracking-[-0.04em]">{project.title}</p>
