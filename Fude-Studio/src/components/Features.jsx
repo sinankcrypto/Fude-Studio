@@ -3,7 +3,7 @@ import { heroContent, introContent } from "../constants/features";
 
 export default function Index() {
     return (
-        <div className="min-h-screen bg-dark text-white">
+        <div className="min-h-screen bg-dark text-white" id="services">
             <main className="mx-auto max-w-[1440px] px-6 py-16 sm:px-10 md:px-[60px] md:py-20">
                 <h1 className="max-w-[918px] text-3xl uppercase leading-[1.1] tracking-tight sm:text-4xl md:text-[40px]">
                     {heroContent.text}

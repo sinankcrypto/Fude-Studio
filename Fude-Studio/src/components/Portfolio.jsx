@@ -6,7 +6,7 @@ export default function Portfolio() {
     const [activeProject, setActiveProject] = useState(null);
 
     return (
-        <section className="min-h-screen bg-[#f3f2f0] px-6 py-12 text-[#2A2A2A] sm:px-10 sm:py-16 lg:px-[4vw] lg:py-[7.1vw]">
+        <section className="min-h-screen bg-[#f3f2f0] px-6 py-12 text-[#2A2A2A] sm:px-10 sm:py-16 lg:px-[4vw] lg:py-[7.1vw]" id="portfolio">
             <div className="mx-auto max-w-[1440px]">
                 <div className="mb-16 grid gap-10 md:grid-cols-[1.04fr_0.96fr] md:gap-16 lg:mb-[7.1vw] lg:gap-[9vw]">
                     <div>

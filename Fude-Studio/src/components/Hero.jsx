@@ -3,7 +3,7 @@ import { HERO_CONTENT } from "../constants/navbar";
 
 export default function Hero() {
     return (
-        <section className="w-full px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-y-0 pt-16 pb-24 md:pt-20 md:pb-15 bg-[#F0F0F0]">
+        <section className="w-full px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-y-0 pt-16 pb-24 md:pt-20 md:pb-15 bg-[#F0F0F0]" id="about">
             <div className="w-full lg:col-span-7 lg:row-start-1 flex flex-col">
                 <motion.h1
                     initial={{ y: 40, opacity: 0 }}

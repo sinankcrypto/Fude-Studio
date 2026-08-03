@@ -8,7 +8,7 @@ const DesktopMenu = () => {
             {NAVBAR_OPTIONS.map((option, index) => (
                 <motion.a
                     key={index}
-                    href={`#${option.link}`}
+                    href={`/#${option.link}`}
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 + index * 0.08, duration: 0.4, ease: "easeOut" }}
@@ -84,7 +84,7 @@ export default function Navbar() {
                             {NAVBAR_OPTIONS.map((option, index) => (
                                 <a
                                     key={index}
-                                    href={`#${option.link}`}
+                                    href={`/#${option.link}`}
                                     onClick={() => setIsOpen(false)}
                                     className="text-sm font-light tracking-tight text-[#2A2A2A] hover:text-[#2A2A2A] transition-colors duration-200 uppercase py-1 border-b border-[#2A2A2A]/10"
                                 >
