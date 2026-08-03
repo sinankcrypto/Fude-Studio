@@ -19,7 +19,7 @@ export const CLIENTS_ROW_1 = [
     id: "jo-and-jo-1",
     name: "JO & JO",
     image: joAndJoIcon,
-    isHighlighted: true, // White background card as seen in design reference
+    isHighlighted: false, // Set to false to avoid permanent white card
     invert: true, // Invert white PNG logo to sharp black text
   },
   {
@@ -90,7 +90,7 @@ export const CLIENTS_ROW_2 = [
     id: "jo-and-jo-2",
     name: "JO & JO",
     image: joAndJoIcon,
-    isHighlighted: true,
+    isHighlighted: false,
     invert: true,
   },
 ];

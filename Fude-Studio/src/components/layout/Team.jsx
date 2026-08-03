@@ -17,7 +17,7 @@ export default function Team() {
         {TEAM_SECTION.title}
       </h2>
 
-      <p className="mt-6 max-w-3xl text-base leading-snug text-muted">
+      <p className="mt-6 max-w-3xl text-[16px] font-normal uppercase leading-[1.4] text-text">
         {TEAM_SECTION.description}
       </p>
 
@@ -40,7 +40,7 @@ export default function Team() {
               key={`${member.name}-${index}`}
               className="flex flex-col w-64 sm:w-72 lg:w-80 shrink-0 transition-transform duration-300 hover:scale-[1.02]"
             >
-              <p className="text-sm sm:text-base uppercase leading-tight text-text font-medium truncate">
+              <p className="text-base sm:text-[18px] font-normal uppercase leading-snug text-text max-w-[220px] min-h-[2.6rem]">
                 {member.role}
               </p>
 
@@ -52,7 +52,7 @@ export default function Team() {
                 />
               </div>
 
-              <p className="mt-4 text-lg sm:text-xl font-normal uppercase leading-tight text-text">
+              <p className="mt-4 text-[20px] font-semibold uppercase leading-tight text-text">
                 {member.name}
               </p>
             </div>

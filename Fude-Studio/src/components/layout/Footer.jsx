@@ -82,22 +82,22 @@ function Footer() {
       id="contact"
       className="overflow-hidden bg-dark text-text-light"
     >
-      <Container className="px-6 lg:px-16">
+      <Container className="px-6 lg:px-14">
         {/* ========================================
             CTA + NEWSLETTER + SOCIALS / LINK GROUPS
             ======================================== */}
 
         <div className="flex flex-col gap-16 border-b border-white/20 py-16 lg:flex-row lg:justify-between lg:gap-12 lg:py-24">
           {/* Left: CTA, newsletter, socials */}
-          <div className="flex max-w-[449px] flex-col gap-14">
-            <h2 className="text-2xl font-normal uppercase leading-[1.1] sm:text-[26px]">
-              We would love to hear from you. Let's work together.
+          <div className="flex max-w-[520px] flex-col gap-14">
+            <h2 className="text-2xl font-normal uppercase leading-[1.1] sm:text-[26px] tracking-tight">
+              We would love to hear from you.<br />Let's work together.
             </h2>
 
             <div>
-              <SectionLabel className="text-text-light/60">
+              <span className="block text-xs font-medium tracking-[0.08em] text-text-light/60">
                 Sign up for our newsletter (No spam)
-              </SectionLabel>
+              </span>
 
               <form
                 className="mt-6 flex items-center justify-between gap-4 border-b border-white/40 pb-4"
@@ -113,10 +113,10 @@ function Footer() {
                 <button
                   type="submit"
                   aria-label="Subscribe"
-                  className="flex size-9 shrink-0 items-center justify-center rounded-full border border-text-light/40 transition-colors hover:bg-text-light hover:text-dark"
+                  className="flex h-9 px-5 shrink-0 items-center justify-center rounded-full bg-[#F0F0F0] text-dark transition-colors hover:bg-white"
                 >
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="#2A2A2A" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </button>
               </form>
@@ -149,14 +149,14 @@ function Footer() {
             />
 
             <div>
-              <SectionLabel className="text-text-light/60">
+              <SectionLabel className="text-text-light/60 font-normal">
                 Business Enquiries
               </SectionLabel>
 
-              <div className="mt-6 space-y-2">
+              <div className="mt-6 space-y-2 text-xs sm:text-sm font-normal uppercase tracking-normal text-text-light/80">
                 <a
                   href={`mailto:${FOOTER_CONTACT.email}`}
-                  className="block uppercase transition-opacity hover:opacity-60"
+                  className="block transition-opacity hover:opacity-60"
                 >
                   {FOOTER_CONTACT.email}
                 </a>
@@ -165,7 +165,7 @@ function Footer() {
                   <a
                     key={phone}
                     href={`tel:${phone.replace(/\s/g, "")}`}
-                    className="block uppercase transition-opacity hover:opacity-60"
+                    className="block transition-opacity hover:opacity-60"
                   >
                     {phone}
                   </a>
@@ -174,11 +174,11 @@ function Footer() {
             </div>
 
             <div>
-              <SectionLabel className="text-text-light/60">
+              <SectionLabel className="text-text-light/60 font-normal">
                 Location
               </SectionLabel>
 
-              <p className="mt-6 max-w-[158px] uppercase leading-relaxed">
+              <p className="mt-6 max-w-[158px] text-xs sm:text-sm font-normal uppercase leading-relaxed text-text-light/80">
                 {FOOTER_CONTACT.location}
               </p>
             </div>
@@ -208,7 +208,7 @@ function Footer() {
 
       <div
         aria-hidden="true"
-        className="select-none whitespace-nowrap pb-2 pl-1 text-[16vw] font-medium uppercase leading-none tracking-tight text-[#2D2D2D]"
+        className="select-none whitespace-nowrap pl-1 text-[16vw] font-medium uppercase leading-none tracking-tight text-[#2D2D2D] translate-y-[25%]"
       >
         Fude Studio
       </div>
@@ -220,7 +220,7 @@ function Footer() {
 function FooterLinkGroup({ title, links }) {
   return (
     <div>
-      <SectionLabel className="text-text-light/60">
+      <SectionLabel className="text-text-light/60 font-normal">
         {title}
       </SectionLabel>
 
@@ -230,7 +230,7 @@ function FooterLinkGroup({ title, links }) {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="inline-block uppercase transition-opacity hover:opacity-60"
+                className="inline-block text-xs sm:text-sm font-normal uppercase tracking-normal text-text-light/80 transition-opacity hover:opacity-60"
               >
                 {link.label}
               </a>

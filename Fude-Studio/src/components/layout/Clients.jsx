@@ -17,7 +17,7 @@ export default function Clients() {
         </div>
 
         <div className="md:w-2/3">
-          <p className="max-w-2xl text-base sm:text-lg lg:text-[19px] font-normal uppercase leading-[1.35] tracking-normal text-text">
+          <p className="max-w-2xl text-base sm:text-lg lg:text-[30px] font-normal uppercase leading-[1.35] tracking-normal text-text">
             {CLIENTS_SECTION.description}
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function Clients() {
                 className={`relative flex items-center justify-center w-60 sm:w-72 lg:w-80 h-36 sm:h-44 md:h-48 p-6 shrink-0 transition-all duration-300 ${
                   client.isHighlighted
                     ? "bg-white shadow-sm"
-                    : "bg-[#EAEAEA] hover:bg-[#E2E2E2]"
+                    : "bg-[#EAEAEA] hover:bg-white hover:shadow-sm"
                 }`}
               >
                 {/* Corner Brackets / Ticks (┌ ┐ └ ┘) */}
@@ -60,7 +60,7 @@ export default function Clients() {
                   src={client.image}
                   alt={client.name}
                   className={`max-h-12 sm:max-h-16 max-w-[70%] object-contain ${
-                    client.invert ? "invert brightness-0" : ""
+                    client.invert ? "brightness-0" : ""
                   }`}
                 />
               </div>
@@ -88,7 +88,7 @@ export default function Clients() {
                 className={`relative flex items-center justify-center w-60 sm:w-72 lg:w-80 h-36 sm:h-44 md:h-48 p-6 shrink-0 transition-all duration-300 ${
                   client.isHighlighted
                     ? "bg-white shadow-sm"
-                    : "bg-[#EAEAEA] hover:bg-[#E2E2E2]"
+                    : "bg-[#EAEAEA] hover:bg-white hover:shadow-sm"
                 }`}
               >
                 {/* Corner Brackets / Ticks (┌ ┐ └ ┘) */}
@@ -102,7 +102,7 @@ export default function Clients() {
                   src={client.image}
                   alt={client.name}
                   className={`max-h-12 sm:max-h-16 max-w-[70%] object-contain ${
-                    client.invert ? "invert brightness-0" : ""
+                    client.invert ? "brightness-0" : ""
                   }`}
                 />
               </div>
