@@ -27,7 +27,7 @@ export default function Clients() {
       <div className="flex flex-col gap-4 sm:gap-6 lg:gap-8 w-full overflow-hidden py-2">
         
         {/* Row 1: Animates to the RIGHT */}
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden py-3">
           <motion.div
             className="flex gap-4 sm:gap-6 lg:gap-8 w-max"
             animate={{ x: ["-50%", "0%"] }}
@@ -35,7 +35,7 @@ export default function Clients() {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 25,
+                duration: 45,
                 ease: "linear",
               },
             }}
@@ -43,23 +43,23 @@ export default function Clients() {
             {row1Duplicated.map((client, index) => (
               <div
                 key={`row1-${client.id}-${index}`}
-                className={`relative flex items-center justify-center w-60 sm:w-72 lg:w-80 h-36 sm:h-44 md:h-48 p-6 shrink-0 transition-all duration-300 ${
+                className={`group relative flex items-center justify-center w-60 sm:w-72 lg:w-80 h-36 sm:h-44 md:h-48 p-6 shrink-0 transition-all duration-500 ease-out transform-gpu ${
                   client.isHighlighted
-                    ? "bg-white shadow-sm"
-                    : "bg-[#EAEAEA] hover:bg-white hover:shadow-sm"
+                    ? "bg-white shadow-md -translate-y-1"
+                    : "bg-[#EAEAEA] hover:bg-white hover:shadow-xl hover:-translate-y-2 hover:z-10"
                 }`}
               >
                 {/* Corner Brackets / Ticks (┌ ┐ └ ┘) */}
-                <span className="absolute top-0 left-0 w-2.5 h-2.5 border-t border-l border-neutral-400/80" />
-                <span className="absolute top-0 right-0 w-2.5 h-2.5 border-t border-r border-neutral-400/80" />
-                <span className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b border-l border-neutral-400/80" />
-                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b border-r border-neutral-400/80" />
+                <span className="absolute top-0 left-0 w-2.5 h-2.5 border-t border-l border-neutral-400/80 group-hover:border-neutral-900 transition-colors duration-500" />
+                <span className="absolute top-0 right-0 w-2.5 h-2.5 border-t border-r border-neutral-400/80 group-hover:border-neutral-900 transition-colors duration-500" />
+                <span className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b border-l border-neutral-400/80 group-hover:border-neutral-900 transition-colors duration-500" />
+                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b border-r border-neutral-400/80 group-hover:border-neutral-900 transition-colors duration-500" />
 
                 {/* Logo Image */}
                 <img
                   src={client.image}
                   alt={client.name}
-                  className={`max-h-12 sm:max-h-16 max-w-[70%] object-contain ${
+                  className={`max-h-12 sm:max-h-16 max-w-[70%] object-contain transition-transform duration-500 ease-out group-hover:scale-105 ${
                     client.invert ? "brightness-0" : ""
                   }`}
                 />
@@ -69,7 +69,7 @@ export default function Clients() {
         </div>
 
         {/* Row 2: Animates to the LEFT */}
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden py-3">
           <motion.div
             className="flex gap-4 sm:gap-6 lg:gap-8 w-max"
             animate={{ x: ["0%", "-50%"] }}
@@ -77,7 +77,7 @@ export default function Clients() {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 25,
+                duration: 45,
                 ease: "linear",
               },
             }}
@@ -85,23 +85,23 @@ export default function Clients() {
             {row2Duplicated.map((client, index) => (
               <div
                 key={`row2-${client.id}-${index}`}
-                className={`relative flex items-center justify-center w-60 sm:w-72 lg:w-80 h-36 sm:h-44 md:h-48 p-6 shrink-0 transition-all duration-300 ${
+                className={`group relative flex items-center justify-center w-60 sm:w-72 lg:w-80 h-36 sm:h-44 md:h-48 p-6 shrink-0 transition-all duration-500 ease-out transform-gpu ${
                   client.isHighlighted
-                    ? "bg-white shadow-sm"
-                    : "bg-[#EAEAEA] hover:bg-white hover:shadow-sm"
+                    ? "bg-white shadow-md -translate-y-1"
+                    : "bg-[#EAEAEA] hover:bg-white hover:shadow-xl hover:-translate-y-2 hover:z-10"
                 }`}
               >
                 {/* Corner Brackets / Ticks (┌ ┐ └ ┘) */}
-                <span className="absolute top-0 left-0 w-2.5 h-2.5 border-t border-l border-neutral-400/80" />
-                <span className="absolute top-0 right-0 w-2.5 h-2.5 border-t border-r border-neutral-400/80" />
-                <span className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b border-l border-neutral-400/80" />
-                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b border-r border-neutral-400/80" />
+                <span className="absolute top-0 left-0 w-2.5 h-2.5 border-t border-l border-neutral-400/80 group-hover:border-neutral-900 transition-colors duration-500" />
+                <span className="absolute top-0 right-0 w-2.5 h-2.5 border-t border-r border-neutral-400/80 group-hover:border-neutral-900 transition-colors duration-500" />
+                <span className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b border-l border-neutral-400/80 group-hover:border-neutral-900 transition-colors duration-500" />
+                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b border-r border-neutral-400/80 group-hover:border-neutral-900 transition-colors duration-500" />
 
                 {/* Logo Image */}
                 <img
                   src={client.image}
                   alt={client.name}
-                  className={`max-h-12 sm:max-h-16 max-w-[70%] object-contain ${
+                  className={`max-h-12 sm:max-h-16 max-w-[70%] object-contain transition-transform duration-500 ease-out group-hover:scale-105 ${
                     client.invert ? "brightness-0" : ""
                   }`}
                 />
