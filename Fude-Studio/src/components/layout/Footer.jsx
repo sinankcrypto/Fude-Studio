@@ -2,6 +2,7 @@ import Container from "../common/Container";
 import SectionLabel from "../common/SectionLabel";
 
 import {
+  FOOTER_CTA,
   FOOTER_QUICK_LINKS,
   FOOTER_SERVICES,
   FOOTER_CONTACT,
@@ -51,22 +52,6 @@ const SOCIAL_LINKS = [
       </svg>
     ),
   },
-  {
-    label: "X",
-    href: "#",
-    icon: (
-      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clipPath="url(#footer-x-clip)">
-          <path d="M11.8125 0.703125H14.1131L9.08813 6.46125L15 14.2969H10.3716L6.74625 9.54375L2.59781 14.2969H0.29625L5.67094 8.1375L0 0.703125H4.74656L8.02312 5.04656L11.8125 0.703125ZM11.0062 12.9169H12.2813L4.05281 2.01094H2.68594L11.0062 12.9169Z" fill="#2A2A2A" />
-        </g>
-        <defs>
-          <clipPath id="footer-x-clip">
-            <rect width="15" height="15" fill="white" />
-          </clipPath>
-        </defs>
-      </svg>
-    ),
-  },
 ];
 
 function Footer() {
@@ -84,51 +69,51 @@ function Footer() {
     >
       <Container className="px-6 lg:px-14">
         {/* ========================================
-            CTA + NEWSLETTER + SOCIALS / LINK GROUPS
+            CTA + ACTION BUTTONS + SOCIALS / LINK GROUPS
             ======================================== */}
 
-        <div className="flex flex-col gap-16 border-b border-white/20 py-16 lg:flex-row lg:justify-between lg:gap-12 lg:py-24">
-          {/* Left: CTA, newsletter, socials */}
-          <div className="flex max-w-[520px] flex-col gap-14">
-            <h2 className="text-2xl font-normal uppercase leading-[1.1] sm:text-[26px] tracking-tight">
-              We would love to hear from you.<br />Let's work together.
-            </h2>
+        <div className="flex flex-col gap-16 border-b border-[#3E3A3A] py-16 lg:flex-row lg:justify-start lg:gap-20 xl:gap-28 lg:py-24">
+          {/* Left: CTA heading, action buttons, socials */}
+          <div className="flex max-w-[450px] flex-col justify-between gap-10">
+            <div className="space-y-8">
+              <h2 className="text-2xl font-normal uppercase leading-[1.1] sm:text-[26px] tracking-tight text-[#F0F0F0]">
+                {FOOTER_CTA.heading}
+              </h2>
 
-            <div>
-              <span className="block text-xs font-medium tracking-[0.08em] text-text-light/60">
-                Sign up for our newsletter (No spam)
-              </span>
-
-              <form
-                className="mt-6 flex items-center justify-between gap-4 border-b border-white/40 pb-4"
-                onSubmit={(event) => event.preventDefault()}
-              >
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  aria-label="Email Address"
-                  className="min-w-0 flex-1 bg-transparent text-lg text-text-light outline-none placeholder:text-text-light/50"
-                />
-
-                <button
-                  type="submit"
-                  aria-label="Subscribe"
-                  className="flex h-9 px-5 shrink-0 items-center justify-center rounded-full bg-[#F0F0F0] text-dark transition-colors hover:bg-white"
+              {/* Action Buttons from Figma */}
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a
+                  href={`mailto:${FOOTER_CONTACT.email}`}
+                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#F0F0F0] text-[#2A2A2A] text-xs font-medium uppercase tracking-normal hover:bg-white transition-colors"
                 >
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="#2A2A2A" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.8536 3.64036L7.35357 0.140356C7.25927 0.0492771 7.13297 -0.00112031 7.00187 1.89012e-05C6.87077 0.00115811 6.74536 0.0537427 6.65266 0.146447C6.55995 0.239151 6.50737 0.364557 6.50623 0.495655C6.50509 0.626754 6.55548 0.753055 6.64656 0.847356L9.29309 3.49386H0.500005C0.367395 3.49386 0.240217 3.54653 0.146448 3.6403C0.0526789 3.73407 0 3.86125 0 3.99386C0 4.12646 0.0526789 4.25364 0.146448 4.34741C0.240217 4.44118 0.367395 4.49386 0.500005 4.49386H9.29309L6.64656 7.14036C6.59881 7.18648 6.56072 7.24165 6.53451 7.30265C6.53451 7.36366 6.49451 7.42927 6.49394 7.49566C6.49336 7.56205 6.50601 7.62788 6.53115 7.68933C6.55629 7.75078 6.59342 7.80661 6.64037 7.85355C6.68731 7.9005 6.74314 7.93763 6.80459 7.96277C6.86604 7.98791 6.93188 8.00056 6.99827 7.99998C7.06466 7.9994 7.13027 7.98561 7.19127 7.95941C7.25227 7.9332 7.30745 7.89511 7.35357 7.84736L10.8536 4.34736C10.9473 4.25359 11 4.12644 11 3.99386C11 3.86127 10.9473 3.73412 10.8536 3.64036Z" fill="#2A2A2A"/>
                   </svg>
-                </button>
-              </form>
+                  <span className="text-[#2A2A2A] font-medium">{FOOTER_CTA.emailButtonText}</span>
+                </a>
+
+                <a
+                  href={`https://wa.me/${FOOTER_CONTACT.phoneNumbers[0]?.replace(/[^0-9]/g, "")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#F0F0F0] text-[#2A2A2A] text-xs font-medium uppercase tracking-normal hover:bg-white transition-colors"
+                >
+                  <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.8536 3.64036L7.35357 0.140356C7.25927 0.0492771 7.13297 -0.00112031 7.00187 1.89012e-05C6.87077 0.00115811 6.74536 0.0537427 6.65266 0.146447C6.55995 0.239151 6.50737 0.364557 6.50623 0.495655C6.50509 0.626754 6.55548 0.753055 6.64656 0.847356L9.29309 3.49386H0.500005C0.367395 3.49386 0.240217 3.54653 0.146448 3.6403C0.0526789 3.73407 0 3.86125 0 3.99386C0 4.12646 0.0526789 4.25364 0.146448 4.34741C0.240217 4.44118 0.367395 4.49386 0.500005 4.49386H9.29309L6.64656 7.14036C6.59881 7.18648 6.56072 7.24165 6.53451 7.30265C6.53451 7.36366 6.49451 7.42927 6.49394 7.49566C6.49336 7.56205 6.50601 7.62788 6.53115 7.68933C6.55629 7.75078 6.59342 7.80661 6.64037 7.85355C6.68731 7.9005 6.74314 7.93763 6.80459 7.96277C6.86604 7.98791 6.93188 8.00056 6.99827 7.99998C7.06466 7.9994 7.13027 7.98561 7.19127 7.95941C7.25227 7.9332 7.30745 7.89511 7.35357 7.84736L10.8536 4.34736C10.9473 4.25359 11 4.12644 11 3.99386C11 3.86127 10.9473 3.73412 10.8536 3.64036Z" fill="#2A2A2A"/>
+                  </svg>
+                  <span className="text-[#2A2A2A] font-medium">{FOOTER_CTA.whatsappButtonText}</span>
+                </a>
+              </div>
             </div>
 
-            <div className="flex items-center gap-4">
+            {/* Social Links matching 35px Figma circles */}
+            <div className="flex items-center gap-3 pt-4">
               {SOCIAL_LINKS.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="flex size-9 shrink-0 items-center justify-center rounded-full bg-light transition-opacity hover:opacity-80"
+                  className="flex h-[35px] w-[35px] shrink-0 items-center justify-center rounded-full bg-[#F0F0F0] transition-opacity hover:opacity-80"
                 >
                   {social.icon}
                 </a>
@@ -136,10 +121,10 @@ function Footer() {
             </div>
           </div>
 
-          {/* Right: link groups */}
-          <div className="grid grid-cols-2 gap-x-12 gap-y-16 sm:grid-cols-3 lg:grid-cols-2 lg:gap-x-24 lg:gap-y-24">
+          {/* Right: 2x2 link grid matching Figma specs */}
+          <div className="grid grid-cols-2 gap-x-12 gap-y-16 sm:grid-cols-2 lg:gap-x-16 lg:gap-y-16">
             <FooterLinkGroup
-              title="Quick Links"
+              title="Quick links"
               links={FOOTER_QUICK_LINKS}
             />
 
@@ -149,11 +134,11 @@ function Footer() {
             />
 
             <div>
-              <SectionLabel className="text-text-light/60 font-normal">
-                Business Enquiries
+              <SectionLabel className="text-[#9A9A9A] font-normal text-xs uppercase tracking-normal">
+                Business enquiries
               </SectionLabel>
 
-              <div className="mt-6 space-y-2 text-xs sm:text-sm font-normal uppercase tracking-normal text-text-light/80">
+              <div className="mt-6 space-y-2 text-xs sm:text-sm font-normal uppercase tracking-normal text-[#F0F0F0]">
                 <a
                   href={`mailto:${FOOTER_CONTACT.email}`}
                   className="block transition-opacity hover:opacity-60"
@@ -174,11 +159,11 @@ function Footer() {
             </div>
 
             <div>
-              <SectionLabel className="text-text-light/60 font-normal">
+              <SectionLabel className="text-[#9A9A9A] font-normal text-xs uppercase tracking-normal">
                 Location
               </SectionLabel>
 
-              <p className="mt-6 max-w-[158px] text-xs sm:text-sm font-normal uppercase leading-relaxed text-text-light/80">
+              <p className="mt-6 max-w-[240px] text-xs sm:text-sm font-normal uppercase leading-normal text-[#F0F0F0]">
                 {FOOTER_CONTACT.location}
               </p>
             </div>
@@ -189,7 +174,7 @@ function Footer() {
             BOTTOM BAR
             ======================================== */}
 
-        <div className="flex flex-col gap-6 py-6 text-xs uppercase text-text-light/60 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-6 py-6 text-xs uppercase text-[#9A9A9A] sm:flex-row sm:items-center sm:justify-between">
           <p>©2026 Fude Studio. All rights reserved.</p>
 
           <button
@@ -220,7 +205,7 @@ function Footer() {
 function FooterLinkGroup({ title, links }) {
   return (
     <div>
-      <SectionLabel className="text-text-light/60 font-normal">
+      <SectionLabel className="text-[#9A9A9A] font-normal text-xs uppercase tracking-normal">
         {title}
       </SectionLabel>
 
@@ -230,7 +215,7 @@ function FooterLinkGroup({ title, links }) {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="inline-block text-xs sm:text-sm font-normal uppercase tracking-normal text-text-light/80 transition-opacity hover:opacity-60"
+                className="inline-block text-xs sm:text-sm font-normal uppercase tracking-normal text-[#F0F0F0] transition-opacity hover:opacity-60"
               >
                 {link.label}
               </a>
@@ -243,3 +228,4 @@ function FooterLinkGroup({ title, links }) {
 }
 
 export default Footer;
+

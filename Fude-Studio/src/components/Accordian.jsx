@@ -41,7 +41,7 @@ export default function ServicesAccordion() {
                             className="flex w-full items-center justify-between gap-6 py-6 text-left transition-colors md:py-8"
                         >
                             <span
-                                className={`flex items-baseline gap-3 text-2xl uppercase tracking-tight transition-colors sm:gap-4 sm:text-[30px] ${isOpen ? "text-white" : "text-white/40"
+                                className={`flex items-baseline gap-3 font-heading text-2xl uppercase tracking-tight transition-colors sm:gap-4 sm:text-[30px] ${isOpen ? "text-white" : "text-white/40"
                                     }`}
                             >
                                 <span>{service.number}</span>
