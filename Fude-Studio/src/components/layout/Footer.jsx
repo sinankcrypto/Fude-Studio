@@ -72,11 +72,11 @@ function Footer() {
             CTA + ACTION BUTTONS + SOCIALS / LINK GROUPS
             ======================================== */}
 
-        <div className="flex flex-col gap-16 border-b border-[#3E3A3A] py-16 lg:flex-row lg:justify-start lg:gap-20 xl:gap-28 lg:py-24">
+        <div className="flex flex-col gap-16 border-b border-[#3E3A3A] py-16 lg:flex-row lg:justify-between lg:py-24">
           {/* Left: CTA heading, action buttons, socials */}
-          <div className="flex max-w-[450px] flex-col justify-between gap-10">
+          <div className="flex max-w-[450px] lg:max-w-none lg:w-[40%] flex-col justify-between gap-10">
             <div className="space-y-8">
-              <h2 className="text-2xl font-normal uppercase leading-[1.1] sm:text-[26px] tracking-tight text-[#F0F0F0]">
+              <h2 className="text-2xl font-normal uppercase leading-[1.1] sm:text-[26px] tracking-tighter text-[#F0F0F0]">
                 {FOOTER_CTA.heading}
               </h2>
 
@@ -121,8 +121,8 @@ function Footer() {
             </div>
           </div>
 
-          {/* Right: 2x2 link grid matching Figma specs */}
-          <div className="grid grid-cols-2 gap-x-12 gap-y-16 sm:grid-cols-2 lg:gap-x-16 lg:gap-y-16">
+          {/* Right: 2x2 link grid starting at ~65% width with compact vertical spacing */}
+          <div className="grid grid-cols-2 gap-x-10 gap-y-8 sm:grid-cols-2 lg:w-[35%] lg:gap-x-12 lg:gap-y-8 lg:ml-auto">
             <FooterLinkGroup
               title="Quick links"
               links={FOOTER_QUICK_LINKS}
@@ -138,7 +138,7 @@ function Footer() {
                 Business enquiries
               </SectionLabel>
 
-              <div className="mt-6 space-y-2 text-xs sm:text-sm font-normal uppercase tracking-normal text-[#F0F0F0]">
+              <div className="mt-3 space-y-1 text-xs sm:text-sm font-normal uppercase tracking-normal text-[#F0F0F0]">
                 <a
                   href={`mailto:${FOOTER_CONTACT.email}`}
                   className="block transition-opacity hover:opacity-60"
@@ -163,7 +163,7 @@ function Footer() {
                 Location
               </SectionLabel>
 
-              <p className="mt-6 max-w-[240px] text-xs sm:text-sm font-normal uppercase leading-normal text-[#F0F0F0]">
+              <p className="mt-3 max-w-[240px] text-xs sm:text-sm font-normal uppercase leading-normal text-[#F0F0F0]">
                 {FOOTER_CONTACT.location}
               </p>
             </div>
@@ -209,8 +209,8 @@ function FooterLinkGroup({ title, links }) {
         {title}
       </SectionLabel>
 
-      <nav className="mt-6">
-        <ul className="space-y-2">
+      <nav className="mt-3">
+        <ul className="space-y-1">
           {links.map((link) => (
             <li key={link.label}>
               <a

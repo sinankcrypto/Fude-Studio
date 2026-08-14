@@ -11,13 +11,13 @@ export default function Clients() {
       {/* Header Section - Figma Specs Aligned */}
       <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-12 lg:mb-16">
         <div className="lg:w-[44%]">
-          <h2 className="text-[#2A2A2A] text-[14px] font-medium uppercase tracking-[-0.04em]">
+          <h2 className="text-[#2A2A2A] text-[14px] font-medium uppercase tracking-[-0.03em]">
             {CLIENTS_SECTION.title}
           </h2>
         </div>
 
         <div className="lg:w-[60%]">
-          <p className="max-w-full lg:max-w-[715px] text-lg sm:text-2xl lg:text-[30px] font-normal uppercase leading-[1.2] tracking-[-0.08em] text-[#2A2A2A]">
+          <p className="max-w-full lg:max-w-[715px] text-lg sm:text-2xl lg:text-[30px] font-normal uppercase leading-[1.2] tracking-[-0.06em] text-[#2A2A2A]">
             {CLIENTS_SECTION.description}
           </p>
         </div>
