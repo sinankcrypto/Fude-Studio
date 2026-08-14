@@ -7,17 +7,17 @@ export default function Clients() {
   const row2Duplicated = [...CLIENTS_ROW_2, ...CLIENTS_ROW_2, ...CLIENTS_ROW_2, ...CLIENTS_ROW_2];
 
   return (
-    <section id="clients" className="w-full px-6 py-16 lg:px-16 lg:py-24 overflow-hidden bg-[#EDEDED]">
-      {/* Header Section */}
-      <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12 lg:mb-16">
-        <div className="md:w-1/3">
-          <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-text">
+    <section id="clients" className="w-full px-6 py-16 lg:px-[60px] lg:pt-[94px] lg:pb-16 overflow-hidden bg-[#EDEDED]">
+      {/* Header Section - Figma Specs Aligned */}
+      <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-12 lg:mb-16">
+        <div className="lg:w-[44%]">
+          <h2 className="text-[#2A2A2A] text-[14px] font-medium uppercase tracking-[-0.04em]">
             {CLIENTS_SECTION.title}
           </h2>
         </div>
 
-        <div className="md:w-2/3">
-          <p className="max-w-2xl text-base sm:text-lg lg:text-[30px] font-normal uppercase leading-[1.35] tracking-normal text-text">
+        <div className="lg:w-[60%]">
+          <p className="max-w-full lg:max-w-[715px] text-lg sm:text-2xl lg:text-[30px] font-normal uppercase leading-[1.2] tracking-[-0.08em] text-[#2A2A2A]">
             {CLIENTS_SECTION.description}
           </p>
         </div>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NAVBAR_OPTIONS } from "../../constants/navbar";
 import { motion, AnimatePresence } from "motion/react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/Fude-logo.png";
 
 const DesktopMenu = () => {
     return (
@@ -13,7 +13,7 @@ const DesktopMenu = () => {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 + index * 0.08, duration: 0.4, ease: "easeOut" }}
-                    className="text-[14px] font-extralight tracking-tight text-[#2A2A2A] hover:text-[#2A2A2A] transition-colors duration-200 uppercase relative py-2 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-[#2A2A2A] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+                    className="text-[14px] font-medium tracking-tight text-[#2A2A2A] hover:text-[#2A2A2A] transition-colors duration-200 uppercase relative py-2 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-[#2A2A2A] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
                 >
                     {option.name}
                 </motion.a>
@@ -87,7 +87,7 @@ export default function Navbar() {
                                     key={index}
                                     href={`/#${option.link}`}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-sm font-light tracking-tight text-[#2A2A2A] hover:text-[#2A2A2A] transition-colors duration-200 uppercase py-1 border-b border-[#2A2A2A]/10"
+                                    className="text-sm font-medium tracking-tight text-[#2A2A2A] hover:text-[#2A2A2A] transition-colors duration-200 uppercase py-1 border-b border-[#2A2A2A]/10"
                                 >
                                     {option.name}
                                 </a>

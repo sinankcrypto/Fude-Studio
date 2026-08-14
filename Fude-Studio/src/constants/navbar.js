@@ -9,6 +9,6 @@ export const NAVBAR_OPTIONS = [
 
 
 export const HERO_CONTENT = {
-    title: "A digital design studio driven by research & strategy",
-    subtitle: "We design and develop exceptional digital products & services, eCommerce, and brand communication solutions. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    title: "A design studio building meaningful brands through strategy and design.",
+    subtitle: "We create meaningful brands through strategic branding, graphic design, web design, motion graphics, and digital solutions that connect businesses with audiences and drive growth."
 }

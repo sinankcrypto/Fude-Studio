@@ -1,21 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&display=swap');
 @import "tailwindcss";
-
-
-@font-face {
-  font-family: "Sequel Sans";
-  src: url("./assets/fonts/SequelSans-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sequel Sans";
-  src: url("./assets/fonts/SequelSans-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
 @theme {
   /* ========================================
@@ -29,14 +13,20 @@
   --color-text-light: #F0F0F0;
 
   --color-muted: #717171;
-  --color-border: ##3E3A3A;
+  --color-border: #3E3A3A;
+
+  --color-background: #EDEDED;
+  --color-foreground: #2A2A2A;
 
 
   /* ========================================
      TYPOGRAPHY
      ======================================== */
 
-  --font-sans: Sequel Sans, sans-serif;
+  --font-sans: "Manrope", sans-serif;
+  --font-heading: "DM Sans", sans-serif;
+  --font-header: "DM Sans", sans-serif;
+  --font-body: "Manrope", sans-serif;
 
 
   /* ========================================
@@ -76,9 +66,13 @@ body {
   min-width: 320px;
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-body), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading, .font-header {
+  font-family: var(--font-heading), sans-serif;
 }
 
 * {

@@ -1,22 +1,28 @@
+export const FOOTER_CTA = {
+  heading: "We would love to hear from you. Let's work together.",
+  emailButtonText: "Email Our Team",
+  whatsappButtonText: "Chat via WhatsApp",
+};
+
 export const FOOTER_QUICK_LINKS = [
   {
-    label: "About Us",
+    label: "about us",
     href: "#about",
   },
   {
-    label: "Portfolio",
+    label: "portfolio",
     href: "#portfolio",
   },
   {
-    label: "Clients",
+    label: "clients",
     href: "#clients",
   },
   {
-    label: "Team",
+    label: "team",
     href: "#team",
   },
   {
-    label: "Contact Us",
+    label: "contact us",
     href: "#contact",
   },
 ];
@@ -27,15 +33,15 @@ export const FOOTER_SERVICES = [
     href: "#branding",
   },
   {
-    label: "Graphic Design",
+    label: "graphic design",
     href: "#graphic-design",
   },
   {
-    label: "Web Design",
+    label: "web design",
     href: "#web-design",
   },
   {
-    label: "Motion & Video",
+    label: "motion & video",
     href: "#motion-video",
   },
 ];
@@ -47,4 +53,4 @@ export const FOOTER_CONTACT = {
     "+971 50 563 4881",
   ],
   location: "DUBAI, RAS AL KHAIMAH - UNITED ARAB EMIRATES",
-};
+};

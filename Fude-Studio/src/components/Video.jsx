@@ -65,8 +65,7 @@ export default function Video() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.7, duration: 0.8 }}
-                    className="text-white text-3xl sm:text-4xl md:text-5xl font-light tracking-wide lowercase opacity-95 select-none"
-                    style={{ fontFamily: "sans-serif" }}
+                    className="text-white text-3xl sm:text-4xl md:text-5xl font-light tracking-wide lowercase opacity-95 select-none font-heading"
                 >
                     envís
                 </motion.div>
