@@ -10,5 +10,5 @@ export const NAVBAR_OPTIONS = [
 
 export const HERO_CONTENT = {
     title: "A design studio building meaningful brands through strategy and design.",
-    subtitle: "We create meaningful brands through strategic branding, graphic design, web design, motion graphics, and digital solutions that connect businesses with audiences and drive growth."
+    subtitle: "FUDE Studio is a creative design studio driven by ideas, strategy, and purposeful creativity. We create distinctive brands and meaningful experiences that connect, inspire, and grow."
 }
