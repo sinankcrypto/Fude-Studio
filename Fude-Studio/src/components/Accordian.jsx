@@ -6,14 +6,14 @@ function ToggleIcon({ open }) {
     return (
         <span className="relative flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white">
             <span className="absolute h-[1px] w-2.5 bg-black" />
-            <motion.span 
+            <motion.span
                 initial={false}
-                animate={{ 
+                animate={{
                     scaleY: open ? 0 : 1,
                     rotate: open ? 90 : 0
                 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute h-2.5 w-[1px] bg-black origin-center" 
+                className="absolute h-2.5 w-[1px] bg-black origin-center"
             />
         </span>
     );
@@ -57,7 +57,7 @@ export default function ServicesAccordion() {
                 const hasColumns = service.columns.length > 0;
 
                 return (
-                    <div 
+                    <div
                         key={service.number}
                         ref={(el) => {
                             if (el) {

@@ -6,9 +6,9 @@ import xImage from "../assets/images/X-image.jpeg";
 
 
 export const pageContent = {
-    heading: ["See the work", "behind the words"],
+    heading: ["Explore our work.", "Experience our ", "creativity"],
     description:
-        "From first thought to final frame, we shape distinctive identities and digital stories for ambitious people and brands. Explore a selection of projects built with clarity, character, and care.",
+        "Our portfolio showcases the creative work we deliver for ambitious brands, businesses, and organizations, combining strategic branding, graphic design, web design, and motion solutions to create meaningful visual experiences that strengthen brand identity, communicate clearly, engage audiences, and support business growth across every platform and digital touchpoint with purpose.",
     button: "View our portfolio",
 };
 
