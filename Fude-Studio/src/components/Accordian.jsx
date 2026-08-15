@@ -22,15 +22,15 @@ function ToggleIcon({ open }) {
 export default function ServicesAccordion() {
     const [openNumber, setOpenNumber] = useState(services[0].number);
     const itemRefs = useRef({});
-    const isMounted = useRef(false);
+    const hasUserInteracted = useRef(false);
 
     const toggle = (number) => {
+        hasUserInteracted.current = true;
         setOpenNumber((current) => (current === number ? null : number));
     };
 
     useEffect(() => {
-        if (!isMounted.current) {
-            isMounted.current = true;
+        if (!hasUserInteracted.current) {
             return;
         }
 

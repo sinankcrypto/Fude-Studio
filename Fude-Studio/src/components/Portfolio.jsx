@@ -1,36 +1,19 @@
-import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
-import { pageContent, projects } from "../constants/portfolio";
-
-const allImages = projects.map((project) => project.image);
+import { pageContent } from "../constants/portfolio";
 
 function PortfolioShowcase() {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImageIndex((prev) => (prev + 1) % allImages.length);
-        }, 4000);
-        return () => clearInterval(interval);
-    }, []);
-
-    const currentImage = allImages[currentImageIndex];
-
     return (
         <div className="group relative aspect-[1.72/1] overflow-hidden w-full bg-neutral-200">
-            <AnimatePresence initial={false}>
-                <motion.img
-                    key={currentImage}
-                    src={currentImage}
-                    alt="Portfolio showcase"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-            </AnimatePresence>
+            <video
+                src={pageContent.portfolio_video_url}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                onEnded={(e) => e.target.play()}
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            />
         </div>
     );
 }

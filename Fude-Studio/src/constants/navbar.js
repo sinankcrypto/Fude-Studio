@@ -1,3 +1,5 @@
+const hero_video_url = 'https://res.cloudinary.com/dpu2frcru/video/upload/v1786809701/WEB_PORTFOLIO_dqcfap.mp4'
+
 export const NAVBAR_OPTIONS = [
     { name: 'ABOUT US', link: 'about' },
     { name: 'SERVICES', link: 'services' },
@@ -10,5 +12,6 @@ export const NAVBAR_OPTIONS = [
 
 export const HERO_CONTENT = {
     title: "A design studio building meaningful brands through strategy and design.",
-    subtitle: "FUDE Studio is a creative design studio driven by ideas, strategy, and purposeful creativity. We create distinctive brands and meaningful experiences that connect, inspire, and grow."
+    subtitle: "FUDE Studio is a creative design studio driven by ideas, strategy, and purposeful creativity. We create distinctive brands and meaningful experiences that connect, inspire, and grow.",
+    hero_video_url
 }

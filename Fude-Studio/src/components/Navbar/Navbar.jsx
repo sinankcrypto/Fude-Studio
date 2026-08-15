@@ -13,11 +13,10 @@ const DesktopMenu = ({ activeSection, onNavClick }) => {
                         key={option.link}
                         href={`/#${option.link}`}
                         onClick={(e) => onNavClick(e, option.link)}
-                        className={`text-[14px] tracking-tight uppercase py-1 transition-all duration-300 ease-out cursor-pointer ${
-                            isActive
+                        className={`text-[14px] tracking-tight uppercase py-1 transition-all duration-300 ease-out cursor-pointer ${isActive
                                 ? "font-semibold text-[#2A2A2A] opacity-100"
                                 : "font-normal text-[#2A2A2A]/55 hover:text-[#2A2A2A] hover:opacity-100"
-                        }`}
+                            }`}
                     >
                         {option.name}
                     </motion.a>
@@ -107,7 +106,7 @@ export default function Navbar() {
                     className="w-[84px] md:w-[88px] h-[28px] md:h-[30px] object-contain cursor-pointer"
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 />
-                
+
                 {/* Desktop Menu - Starts at 56% of max-w-[1320px] container */}
                 <div className="hidden md:flex items-center lg:w-[44%]">
                     <DesktopMenu activeSection={activeSection} onNavClick={handleNavClick} />
@@ -135,11 +134,10 @@ export default function Navbar() {
                                         key={option.link}
                                         href={`/#${option.link}`}
                                         onClick={(e) => handleNavClick(e, option.link)}
-                                        className={`text-sm uppercase py-1 border-b border-[#2A2A2A]/10 transition-colors ${
-                                            isActive
+                                        className={`text-sm uppercase py-1 border-b border-[#2A2A2A]/10 transition-colors ${isActive
                                                 ? "font-semibold text-[#2A2A2A]"
                                                 : "font-normal text-[#2A2A2A]/60"
-                                        }`}
+                                            }`}
                                     >
                                         {option.name}
                                     </a>

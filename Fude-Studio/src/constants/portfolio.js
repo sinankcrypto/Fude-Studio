@@ -3,13 +3,14 @@ import breenImage from "../assets/images/Breen-image.jpeg";
 import chemzolImage from "../assets/images/Chemzol-image.jpeg";
 import xImage from "../assets/images/X-image.jpeg";
 
-
+const portfolio_video_url = 'https://res.cloudinary.com/dpu2frcru/video/upload/v1786809717/WEB_PORTFOLIO_002_blcamk.mp4'
 
 export const pageContent = {
     heading: ["Explore our work.", "Experience our ", "creativity"],
     description:
         "Our portfolio showcases the creative work we deliver for ambitious brands, businesses, and organizations, combining strategic branding, graphic design, web design, and motion solutions to create meaningful visual experiences that strengthen brand identity, communicate clearly, engage audiences, and support business growth across every platform and digital touchpoint with purpose.",
     button: "View our portfolio",
+    portfolio_video_url
 };
 
 export const projects = [
