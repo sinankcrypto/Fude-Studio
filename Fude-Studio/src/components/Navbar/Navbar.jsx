@@ -82,9 +82,12 @@ export default function Navbar() {
         setIsOpen(false);
         const element = document.getElementById(link);
         if (element) {
-            const yOffset = -80; // Offset for navbar height
-            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({ top: y, behavior: "smooth" });
+            if (window.lenis) {
+                const offsetValue = window.innerWidth < 768 ? -80 : -96;
+                window.lenis.scrollTo(element, { offset: offsetValue });
+            } else {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
         }
     };
 

@@ -24,7 +24,7 @@ export default function Portfolio() {
             <div className="mx-auto max-w-[1440px]">
                 <div className="mb-16 grid gap-10 md:grid-cols-[1.04fr_0.96fr] md:gap-16 lg:mb-[7.1vw] lg:gap-[9vw]">
                     <div>
-                        <h1 className="max-w-[620px] font-heading text-[48px] font-[48px] leading-[1.2] tracking-tight uppercase text-[#2A2A2A]">
+                        <h1 className="max-w-[620px] font-heading text-3xl sm:text-4xl lg:text-[48px] font-normal leading-[1.2] tracking-tight uppercase text-[#2A2A2A]">
                             {pageContent.heading.map((line) => (
                                 <span className="block" key={line}>
                                     {line}
@@ -38,7 +38,16 @@ export default function Portfolio() {
                         </p>
                         <button
                             type="button"
-                            onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })}
+                            onClick={() => {
+                                const element = document.getElementById("work");
+                                if (element) {
+                                    if (window.lenis) {
+                                        window.lenis.scrollTo(element);
+                                    } else {
+                                        element.scrollIntoView({ behavior: "smooth" });
+                                    }
+                                }
+                            }}
                             className="group relative flex w-fit items-center gap-3 overflow-hidden rounded-full bg-[#1b1b1b] px-6 py-2.5 text-[14px] font-extralight uppercase text-[#F0F0F0] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-dark focus:ring-offset-2"
                         >
                             {/* Animated Background Sweep */}

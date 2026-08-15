@@ -139,7 +139,7 @@ export default function Team() {
                 </div>
 
                 {/* Member Name */}
-                <h3 className="mt-3 sm:mt-4 text-[#2A2A2A] text-[20px] font-medium uppercase leading-[1.15] tracking-[-0.03em]">
+                <h3 className="mt-3 sm:mt-4 text-[#2A2A2A] text-lg sm:text-[20px] font-medium uppercase leading-[1.15] tracking-[-0.03em]">
                   {member.name.split(" ").map((word, i) => (
                     <span key={i} className="block">
                       {word}
