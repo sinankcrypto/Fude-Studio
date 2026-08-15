@@ -1,16 +1,30 @@
-import { useState } from "react";
-import { ArrowRight, ChevronRight } from "lucide-react";
-import { pageContent, projects } from "../constants/portfolio";
+import { ArrowRight } from "lucide-react";
+import { pageContent } from "../constants/portfolio";
+
+function PortfolioShowcase() {
+    return (
+        <div className="group relative aspect-[1.72/1] overflow-hidden w-full bg-neutral-200">
+            <video
+                src={pageContent.portfolio_video_url}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                onEnded={(e) => e.target.play()}
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            />
+        </div>
+    );
+}
 
 export default function Portfolio() {
-    const [activeProject, setActiveProject] = useState(null);
-
     return (
         <section className="min-h-screen bg-[#f3f2f0] px-6 py-12 text-[#2A2A2A] sm:px-10 sm:py-16 lg:px-[4vw] lg:py-[7.1vw]" id="portfolio">
             <div className="mx-auto max-w-[1440px]">
                 <div className="mb-16 grid gap-10 md:grid-cols-[1.04fr_0.96fr] md:gap-16 lg:mb-[7.1vw] lg:gap-[9vw]">
                     <div>
-                        <h1 className="max-w-[620px] font-heading text-[48px] font-[48px] leading-[1.2] tracking-[-0.065em] uppercase text-[#2A2A2A]">
+                        <h1 className="max-w-[620px] font-heading text-3xl sm:text-4xl lg:text-[48px] font-normal leading-[1.2] tracking-tight uppercase text-[#2A2A2A]">
                             {pageContent.heading.map((line) => (
                                 <span className="block" key={line}>
                                     {line}
@@ -19,46 +33,40 @@ export default function Portfolio() {
                         </h1>
                     </div>
                     <div className="flex flex-col justify-end md:pb-1 pr-[10%] font-body pt-[5%]">
-                        <p className="mb-7 text-[12px] leading-[1.2] text-[#6d6b67] sm:text-[16px] ">
+                        <p className="mb-7 text-[12px] leading-[130%] text-[#6d6b67] sm:text-[16px] ">
                             {pageContent.description}
                         </p>
                         <button
                             type="button"
-                            onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })}
-                            className="group flex w-fit items-center tracking-tight gap-3 rounded-full bg-[#1b1b1b] px-4 py-2.5 text-[14px] font-extralight uppercase text-white transition-colors hover:bg-[#6d182d] focus:outline-none focus:ring-2 focus:ring-[#6d182d] focus:ring-offset-2 focus:ring-offset-[#f3f2f0]"
+                            onClick={() => {
+                                const element = document.getElementById("work");
+                                if (element) {
+                                    if (window.lenis) {
+                                        window.lenis.scrollTo(element);
+                                    } else {
+                                        element.scrollIntoView({ behavior: "smooth" });
+                                    }
+                                }
+                            }}
+                            className="group relative flex w-fit items-center gap-3 overflow-hidden rounded-full bg-[#1b1b1b] px-6 py-2.5 text-[14px] font-extralight uppercase text-[#F0F0F0] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-dark focus:ring-offset-2"
                         >
-                            <ArrowRight size={20} strokeWidth={2.5} />
-                            {pageContent.button}
+                            {/* Animated Background Sweep */}
+                            <span className="absolute inset-0 z-0 bg-dark scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100" />
+
+                            {/* Content Wrapper */}
+                            <span className="relative z-10 flex items-center gap-3 tracking-tight">
+                                <span className="relative overflow-hidden flex h-5 w-5 items-center justify-center shrink-0">
+                                    <ArrowRight size={18} strokeWidth={1.5} className="transition-transform duration-300 ease-out group-hover:translate-x-5 absolute" />
+                                    <ArrowRight size={18} strokeWidth={1.5} className="transition-transform duration-300 ease-out -translate-x-5 group-hover:translate-x-0 absolute" />
+                                </span>
+                                {pageContent.button}
+                            </span>
                         </button>
                     </div>
                 </div>
 
-                <div id="work" className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-[1.3vw]">
-                    {projects.map((project, index) => (
-                        <button
-                            key={project.title}
-                            type="button"
-                            aria-label={`View ${project.title} project`}
-                            onClick={() => setActiveProject(activeProject === project.title ? null : project.title)}
-                            className="group relative aspect-[1.72/1] overflow-hidden text-left focus:outline-none focus:ring-2 focus:ring-[#6d182d] focus:ring-offset-4 focus:ring-offset-[#f3f2f0]"
-                        >
-                            <img
-                                src={project.image}
-                                alt={`${project.title} project preview`}
-                                className="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/25" />
-                            <div className="absolute inset-x-0 bottom-0 flex translate-y-2 items-end justify-between p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 sm:p-5">
-                                <div className="text-white">
-                                    <p className="font-heading text-2xl tracking-[-0.04em]">{project.title}</p>
-                                    <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-white/75">{project.category}</p>
-                                </div>
-                                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#171717]">
-                                    <ChevronRight size={15} />
-                                </span>
-                            </div>
-                        </button>
-                    ))}
+                <div id="work" className="w-full">
+                    <PortfolioShowcase />
                 </div>
             </div>
         </section>

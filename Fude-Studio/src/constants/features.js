@@ -1,16 +1,12 @@
 export const heroContent = {
-    text: "We turn founders\u2019 visions into remarkable brands by combining strategy, design, and performance marketing, all under one roof. Explore ",
-    linkText: "our services.",
+    text: "We create meaningful brands through branding, graphic design, web design, motion, and strategic creativity. Explore our services.",
 };
 
 export const introContent = {
-    eyebrow: "Tomorrow\u2019s brands, today.",
+    eyebrow: "Purposeful design, powerful brands.",
     description:
-        "Since 2025, we have been recognized globally for helping founders build market-defining brands. We partner with five clients a year to give each one the focus and care they deserve.",
+        "Since we began, FUDE Studio has been helping businesses build distinctive brands through strategic branding, graphic design, web design, and motion solutions. We create design experiences that connect brands with audiences.",
 };
-
-const lorem =
-    "Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London";
 
 export const services = [
     {
@@ -18,59 +14,119 @@ export const services = [
         title: "Branding",
         columns: [
             [
-                { title: "Brand strategy", description: lorem },
-                { title: "Corporate identity & stationery", description: lorem },
-                { title: "Packaging & product mock-ups", description: lorem },
+                {
+                    title: "Brand strategy",
+                    description: "Strategic brand planning that defines your positioning, messaging, and market presence."
+                },
+                {
+                    title: "Logo & brand identity design",
+                    description: "Distinctive logos and cohesive visual identities that build recognition and trust."
+                },
+                {
+                    title: "Corporate identity & stationery design",
+                    description: "Professional business stationery and branded corporate materials for consistent communication."
+                }
             ],
             [
-                { title: "Logo & brand identity design", description: lorem },
-                { title: "Digital brand asset kit", description: lorem },
-            ],
-        ],
+                {
+                    title: "Digital brand asset kit",
+                    description: "Ready-to-use digital brand assets, including social media templates, presentation layouts, and marketing essentials."
+                },
+                {
+                    title: "Packaging design & product mock-ups",
+                    description: "Creative packaging solutions and realistic product mock-ups that enhance shelf appeal and brand value."
+                }
+            ]
+        ]
     },
     {
         number: "02",
         title: "Graphic design",
         columns: [
             [
-                { title: "Brand strategy", description: lorem },
-                { title: "Corporate identity & stationery", description: lorem },
-                { title: "Packaging & product mock-ups", description: lorem },
+                {
+                    title: "Company profile design",
+                    description: "Professionally crafted company profiles that communicate your brand story with clarity and impact."
+                },
+                {
+                    title: "Marketing materials",
+                    description: "Brochures, flyers, catalogs, posters, and promotional collateral designed to engage your audience."
+                },
+                {
+                    title: "Social media posters (Meta & LinkedIn)",
+                    description: "Creative, brand-focused social media designs optimized for Meta and LinkedIn to maximize engagement and strengthen your online presence."
+                }
             ],
             [
-                { title: "Logo & brand identity design", description: lorem },
-                { title: "Digital brand asset kit", description: lorem },
-            ],
-        ],
+                {
+                    title: "Print design",
+                    description: "High-quality print designs for packaging, billboards, exhibition materials, and commercial publications."
+                },
+                {
+                    title: "Illustration & icon design",
+                    description: "Custom illustrations and icon systems that strengthen visual communication across digital and print media."
+                },
+                {
+                    title: "Annual reports & corporate communications",
+                    description: "Clear, visually engaging reports and corporate documents that present information professionally."
+                }
+            ]
+        ]
     },
     {
         number: "03",
         title: "Web design",
         columns: [
             [
-                { title: "Brand strategy", description: lorem },
-                { title: "Corporate identity & stationery", description: lorem },
-                { title: "Packaging & product mock-ups", description: lorem },
+                {
+                    title: "UI/UX design",
+                    description: "User-focused interfaces and intuitive digital experiences designed for seamless interaction."
+                },
+                {
+                    title: "E-commerce solutions",
+                    description: "Scalable online stores with secure checkout experiences and optimized customer journeys."
+                },
+                {
+                    title: "SEO",
+                    description: "Search engine optimization strategies that improve online visibility and drive organic traffic."
+                }
             ],
             [
-                { title: "Logo & brand identity design", description: lorem },
-                { title: "Digital brand asset kit", description: lorem },
-            ],
-        ],
+                {
+                    title: "Website development",
+                    description: "Responsive, high-performance websites built to deliver exceptional user experiences across all devices."
+                },
+                {
+                    title: "CMS implementation",
+                    description: "Flexible content management systems that make website updates simple and efficient."
+                }
+            ]
+        ]
     },
     {
         number: "04",
         title: "Motion & video",
         columns: [
             [
-                { title: "Brand strategy", description: lorem },
-                { title: "Corporate identity & stationery", description: lorem },
-                { title: "Packaging & product mock-ups", description: lorem },
+                {
+                    title: "Animation & motion graphics",
+                    description: "Creative motion graphics and animations that bring brands and ideas to life."
+                },
+                {
+                    title: "Social media content",
+                    description: "Short-form videos and animated content designed to maximize engagement across digital platforms."
+                }
             ],
             [
-                { title: "Logo & brand identity design", description: lorem },
-                { title: "Digital brand asset kit", description: lorem },
-            ],
-        ],
-    },
+                {
+                    title: "Event & trade show graphics",
+                    description: "Dynamic visual content and digital displays that enhance exhibitions, conferences, and corporate events."
+                },
+                {
+                    title: "Interactive video content",
+                    description: "Interactive video experiences that encourage audience engagement through immersive storytelling."
+                }
+            ]
+        ]
+    }
 ];

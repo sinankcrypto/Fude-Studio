@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { services } from "../constants/features";
 
@@ -6,14 +6,14 @@ function ToggleIcon({ open }) {
     return (
         <span className="relative flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white">
             <span className="absolute h-[1px] w-2.5 bg-black" />
-            <motion.span 
+            <motion.span
                 initial={false}
-                animate={{ 
+                animate={{
                     scaleY: open ? 0 : 1,
                     rotate: open ? 90 : 0
                 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute h-2.5 w-[1px] bg-black origin-center" 
+                className="absolute h-2.5 w-[1px] bg-black origin-center"
             />
         </span>
     );
@@ -21,10 +21,34 @@ function ToggleIcon({ open }) {
 
 export default function ServicesAccordion() {
     const [openNumber, setOpenNumber] = useState(services[0].number);
+    const itemRefs = useRef({});
+    const hasUserInteracted = useRef(false);
 
     const toggle = (number) => {
+        hasUserInteracted.current = true;
         setOpenNumber((current) => (current === number ? null : number));
     };
+
+    useEffect(() => {
+        if (!hasUserInteracted.current) {
+            return;
+        }
+
+        if (openNumber !== null) {
+            // A delay allows the collapsing accordion's height layout change to begin
+            // so we target the correct center viewport scroll position.
+            const timer = setTimeout(() => {
+                const element = itemRefs.current[openNumber];
+                if (element) {
+                    element.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                    });
+                }
+            }, 180);
+            return () => clearTimeout(timer);
+        }
+    }, [openNumber]);
 
     return (
         <div className="divide-y divide-white/20 border-y border-white/20">
@@ -33,7 +57,16 @@ export default function ServicesAccordion() {
                 const hasColumns = service.columns.length > 0;
 
                 return (
-                    <div key={service.number}>
+                    <div
+                        key={service.number}
+                        ref={(el) => {
+                            if (el) {
+                                itemRefs.current[service.number] = el;
+                            } else {
+                                delete itemRefs.current[service.number];
+                            }
+                        }}
+                    >
                         <button
                             type="button"
                             onClick={() => toggle(service.number)}

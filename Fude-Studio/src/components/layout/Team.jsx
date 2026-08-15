@@ -116,8 +116,17 @@ export default function Team() {
                 className="group flex flex-col w-[240px] sm:w-[260px] shrink-0"
               >
                 {/* Role Label */}
-                <p className="text-[#2A2A2A] text-sm sm:text-[16px] lg:text-[18px] font-normal uppercase leading-[1.3] min-h-[44px] flex items-end tracking-[-0.03em]">
-                  {member.role}
+                <p className="text-[#2A2A2A] text-xs sm:text-sm lg:text-[15px] font-normal uppercase leading-[1.25] min-h-[48px] flex flex-col justify-end tracking-[0.08em]">
+                  {(member.role.includes("\n")
+                    ? member.role.split("\n")
+                    : member.role.includes(" & ")
+                    ? member.role.split(" & ").map((part, idx, arr) => (idx < arr.length - 1 ? `${part} &` : part))
+                    : [member.role]
+                  ).map((line, i) => (
+                    <span key={i} className="block">
+                      {line}
+                    </span>
+                  ))}
                 </p>
 
                 {/* Member Portrait Image */}
@@ -130,7 +139,7 @@ export default function Team() {
                 </div>
 
                 {/* Member Name */}
-                <h3 className="mt-3 sm:mt-4 text-[#2A2A2A] text-[20px] font-medium uppercase leading-[1.15] tracking-[-0.03em]">
+                <h3 className="mt-3 sm:mt-4 text-[#2A2A2A] text-lg sm:text-[20px] font-medium uppercase leading-[1.15] tracking-[-0.03em]">
                   {member.name.split(" ").map((word, i) => (
                     <span key={i} className="block">
                       {word}
