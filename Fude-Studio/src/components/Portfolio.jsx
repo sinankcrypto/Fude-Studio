@@ -1,10 +1,46 @@
-import { useState } from "react";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
 import { pageContent, projects } from "../constants/portfolio";
 
-export default function Portfolio() {
-    const [activeProject, setActiveProject] = useState(null);
+const allImages = projects.map((project) => project.image);
 
+function ProjectCard({ project, index }) {
+    const [currentImageIndex, setCurrentImageIndex] = useState(index % allImages.length);
+
+    useEffect(() => {
+        // Stagger the intervals so cards do not transition simultaneously
+        const startTimeout = setTimeout(() => {
+            const interval = setInterval(() => {
+                setCurrentImageIndex((prev) => (prev + 1) % allImages.length);
+            }, 4000);
+            return () => clearInterval(interval);
+        }, index * 400);
+
+        return () => clearTimeout(startTimeout);
+    }, [index]);
+
+    const currentImage = allImages[currentImageIndex];
+
+    return (
+        <div className="group relative aspect-[1.72/1] overflow-hidden w-full bg-neutral-200">
+            <AnimatePresence initial={false}>
+                <motion.img
+                    key={currentImage}
+                    src={currentImage}
+                    alt={`${project.title} project preview`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+            </AnimatePresence>
+        </div>
+    );
+}
+
+export default function Portfolio() {
     return (
         <section className="min-h-screen bg-[#f3f2f0] px-6 py-12 text-[#2A2A2A] sm:px-10 sm:py-16 lg:px-[4vw] lg:py-[7.1vw]" id="portfolio">
             <div className="mx-auto max-w-[1440px]">
@@ -25,7 +61,7 @@ export default function Portfolio() {
                         <button
                             type="button"
                             onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })}
-                            className="group flex w-fit items-center tracking-tight gap-3 rounded-full bg-[#1b1b1b] px-4 py-2.5 text-[14px] font-extralight uppercase text-white transition-colors hover:bg-[#6d182d] focus:outline-none focus:ring-2 focus:ring-[#6d182d] focus:ring-offset-2 focus:ring-offset-[#f3f2f0]"
+                            className="group flex w-fit items-center tracking-tight gap-3 rounded-full bg-[#1b1b1b] px-4 py-2.5 text-[14px] font-extralight uppercase text-white transition-colors hover:bg-dark focus:outline-none focus:ring-2 focus:ring-dark focus:ring-offset-2 focus:ring-offset-[#f3f2f0]"
                         >
                             <ArrowRight size={20} strokeWidth={2.5} />
                             {pageContent.button}
@@ -35,29 +71,11 @@ export default function Portfolio() {
 
                 <div id="work" className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-[1.3vw]">
                     {projects.map((project, index) => (
-                        <button
+                        <ProjectCard
                             key={project.title}
-                            type="button"
-                            aria-label={`View ${project.title} project`}
-                            onClick={() => setActiveProject(activeProject === project.title ? null : project.title)}
-                            className="group relative aspect-[1.72/1] overflow-hidden text-left focus:outline-none focus:ring-2 focus:ring-[#6d182d] focus:ring-offset-4 focus:ring-offset-[#f3f2f0]"
-                        >
-                            <img
-                                src={project.image}
-                                alt={`${project.title} project preview`}
-                                className="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/25" />
-                            <div className="absolute inset-x-0 bottom-0 flex translate-y-2 items-end justify-between p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 sm:p-5">
-                                <div className="text-white">
-                                    <p className="font-heading text-2xl tracking-[-0.04em]">{project.title}</p>
-                                    <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-white/75">{project.category}</p>
-                                </div>
-                                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#171717]">
-                                    <ChevronRight size={15} />
-                                </span>
-                            </div>
-                        </button>
+                            project={project}
+                            index={index}
+                        />
                     ))}
                 </div>
             </div>
