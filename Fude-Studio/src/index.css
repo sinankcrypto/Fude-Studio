@@ -44,9 +44,6 @@
 
   --container-content: 1312px;
 
-  --breakpoint-3xl: 1920px;
-  --breakpoint-4xl: 2560px;
-
   --animate-accordion-down: accordion-down 400ms cubic-bezier(0.16, 1, 0.3, 1);
   --animate-accordion-up: accordion-up 400ms cubic-bezier(0.16, 1, 0.3, 1);
 
