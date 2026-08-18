@@ -33,7 +33,7 @@ export default function Portfolio() {
                         </h1>
                     </div>
                     <div className="flex flex-col justify-end md:pb-1 font-body pt-2 md:pt-0">
-                        <p className="mb-7 text-[12px] leading-[1.25] text-[#6d6b67] sm:text-[14px] tracking-tight">
+                        <p className="mb-7 text-[15px] sm:text-[14px] 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[26px] leading-[1.25] text-[#6d6b67] tracking-tight">
                             {pageContent.description}
                         </p>
                         <a

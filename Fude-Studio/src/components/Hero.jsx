@@ -25,9 +25,9 @@ export default function Hero() {
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.215, 0.61, 0.355, 1] }}
-          className="w-full flex justify-start md:ml-[35%] md:max-w-[380px] lg:ml-[48%] lg:max-w-[440px] xl:ml-[56%] xl:max-w-[480px] 2xl:max-w-[580px]"
+          className="w-full flex justify-start md:ml-[35%] md:max-w-[380px] lg:ml-[48%] lg:max-w-[440px] xl:ml-[56%] xl:max-w-[480px] 2xl:max-w-[580px] 3xl:max-w-[800px] 4xl:max-w-[1100px]"
         >
-          <p className="w-full text-xs sm:text-sm lg:text-[15px] font-normal uppercase leading-[1.3] tracking-tight lg:tracking-[-0.03em] text-[#2A2A2A]">
+          <p className="w-full text-xs sm:text-sm lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[26px] font-normal uppercase leading-[1.3] tracking-tight lg:tracking-[-0.03em] text-[#2A2A2A]">
             {HERO_CONTENT.subtitle}
           </p>
         </motion.div>
