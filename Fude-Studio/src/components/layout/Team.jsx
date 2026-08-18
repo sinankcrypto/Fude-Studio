@@ -68,7 +68,7 @@ export default function Team() {
           {TEAM_SECTION.title}
         </h2>
 
-        <p className="mt-4 sm:mt-5 text-[#717171] text-base lg:text-[16px] font-normal leading-[1.3] max-w-3xl">
+        <p className="mt-4 sm:mt-5 text-[#717171] text-base lg:text-[16px] font-normal leading-[1.3] max-w-3xl tracking-tight">
           {TEAM_SECTION.description}
         </p>
       </div>

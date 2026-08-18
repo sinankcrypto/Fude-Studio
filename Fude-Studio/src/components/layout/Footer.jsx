@@ -137,7 +137,7 @@ function Footer() {
           <button
             type="button"
             onClick={handleBackToTop}
-            className="text-left transition-opacity hover:opacity-60 sm:text-right"
+            className="text-left transition-opacity hover:opacity-60 sm:text-right uppercase"
           >
             Back to top
           </button>

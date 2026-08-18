@@ -24,10 +24,10 @@ export default function Clients() {
       </div>
 
       {/* Carousels Container */}
-      <div className="flex flex-col gap-4 sm:gap-6 lg:gap-8 w-full overflow-hidden py-2">
+      <div className="flex flex-col gap-4 sm:gap-6 lg:gap-8 w-full overflow-hidden py-3">
         
         {/* Row 1: Animates to the RIGHT */}
-        <div className="w-full overflow-hidden py-3">
+        <div className="w-full">
           <motion.div
             className="flex gap-4 sm:gap-6 lg:gap-8 w-max"
             animate={{ x: ["-50%", "0%"] }}
@@ -69,7 +69,7 @@ export default function Clients() {
         </div>
 
         {/* Row 2: Animates to the LEFT */}
-        <div className="w-full overflow-hidden py-3">
+        <div className="w-full">
           <motion.div
             className="flex gap-4 sm:gap-6 lg:gap-8 w-max"
             animate={{ x: ["0%", "-50%"] }}
