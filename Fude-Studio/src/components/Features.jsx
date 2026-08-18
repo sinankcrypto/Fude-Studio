@@ -5,9 +5,9 @@ export default function Index() {
     return (
         <div className="min-h-screen bg-dark text-white" id="services">
             <main className="mx-auto w-full px-6 py-16 sm:px-10 md:px-[60px] md:py-20">
-                <h1 className="max-w-none text-2xl sm:text-3xl md:text-[40px] uppercase leading-[1.1] tracking-wide">
+                <h1 className="max-w-none text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] xl:text-[40px] uppercase leading-[1.1] tracking-wide">
                     {heroContent.text.map((line, index) => (
-                        <span key={index} className="block md:whitespace-nowrap">
+                        <span key={index} className="block xl:whitespace-nowrap">
                             {line}
                         </span>
                     ))}
