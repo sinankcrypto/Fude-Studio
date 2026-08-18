@@ -29,10 +29,16 @@ function Footer() {
 
         <div className="flex flex-col gap-16 border-b border-[#3E3A3A] py-16 lg:flex-row lg:justify-between lg:py-24">
           {/* Left: CTA heading, action buttons, socials */}
-          <div className="flex max-w-[450px] lg:max-w-none lg:w-[40%] flex-col justify-between gap-10">
+          <div className="flex max-w-full sm:max-w-none lg:w-[45%] xl:w-[42%] flex-col justify-between gap-10">
             <div className="space-y-8">
-              <h2 className="text-2xl font-normal uppercase leading-[1.1] sm:text-[26px] tracking-tighter text-[#F0F0F0]">
-                {FOOTER_CTA.heading}
+              <h2 className="text-[16px] min-[360px]:text-[18px] min-[400px]:text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] xl:text-[34px] 2xl:text-[40px] font-normal uppercase leading-[1.15] tracking-tighter text-[#F0F0F0]">
+                {Array.isArray(FOOTER_CTA.heading)
+                  ? FOOTER_CTA.heading.map((line, idx) => (
+                      <span key={idx} className="block whitespace-nowrap">
+                        {line}
+                      </span>
+                    ))
+                  : FOOTER_CTA.heading}
               </h2>
 
               {/* Action Buttons with Portfolio Hover Effect */}

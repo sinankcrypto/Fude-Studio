@@ -1,5 +1,5 @@
 export const FOOTER_CTA = {
-  heading: "We would love to hear from you. Let's work together.",
+  heading: ["We would love to hear from you.", "Let's work together."],
   emailButtonText: "Email Our Team",
   whatsappButtonText: "Chat via WhatsApp",
 };
