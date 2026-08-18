@@ -20,8 +20,8 @@ function PortfolioShowcase() {
 
 export default function Portfolio() {
     return (
-        <section className="min-h-screen bg-[#f3f2f0] px-6 py-12 text-[#2A2A2A] sm:px-10 sm:py-16 lg:px-[4vw] lg:py-[7.1vw]" id="portfolio">
-            <div className="mx-auto max-w-[1440px]">
+        <section className="min-h-screen bg-[#f3f2f0] px-6 lg:px-[60px] py-12 sm:py-16 lg:py-[7.1vw] text-[#2A2A2A]" id="portfolio">
+            <div className="w-full">
                 <div className="mb-16 grid gap-10 md:grid-cols-[1.04fr_0.96fr] md:gap-16 lg:mb-[7.1vw] lg:gap-[9vw]">
                     <div>
                         <h1 className="max-w-[620px] font-heading text-3xl sm:text-4xl lg:text-[48px] font-normal leading-[1.2] tracking-tight uppercase text-[#2A2A2A]">

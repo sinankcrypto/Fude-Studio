@@ -7,7 +7,7 @@ export default function Hero() {
       id="about"
       className="w-full bg-[#F0F0F0] px-6 lg:px-[60px] pt-10 pb-12 lg:pt-[56px] lg:pb-[48px]"
     >
-      <div className="mx-auto max-w-[1320px] flex flex-col gap-8 lg:gap-[28px]">
+      <div className="w-full flex flex-col gap-8 lg:gap-[28px]">
         {/* Main Heading: Matches 966px Figma width */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}

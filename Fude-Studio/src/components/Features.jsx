@@ -4,9 +4,13 @@ import { heroContent, introContent } from "../constants/features";
 export default function Index() {
     return (
         <div className="min-h-screen bg-dark text-white" id="services">
-            <main className="mx-auto max-w-[1440px] px-6 py-16 sm:px-10 md:px-[60px] md:py-20">
-                <h1 className="max-w-[918px] text-2xl sm:text-3xl md:text-[40px] uppercase leading-[1.1] tracking-wide">
-                    {heroContent.text}
+            <main className="mx-auto w-full px-6 py-16 sm:px-10 md:px-[60px] md:py-20">
+                <h1 className="max-w-none text-2xl sm:text-3xl md:text-[40px] uppercase leading-[1.1] tracking-wide">
+                    {heroContent.text.map((line, index) => (
+                        <span key={index} className="block md:whitespace-nowrap">
+                            {line}
+                        </span>
+                    ))}
                 </h1>
 
                 <div className="mt-14 flex flex-col gap-6 border-t border-white/20 pt-8 md:mt-16 md:flex-row md:items-start md:justify-between md:pt-10">

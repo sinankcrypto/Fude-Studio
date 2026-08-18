@@ -1,5 +1,5 @@
 export const heroContent = {
-    text: "We create meaningful brands through branding, graphic design, web design, motion, and strategic creativity. Explore our services.",
+    text: ["We create meaningful brands through", " branding, graphic design, web design, motion, ", "and strategic creativity. Explore our services."],
 };
 
 export const introContent = {
