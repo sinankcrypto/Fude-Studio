@@ -5,7 +5,7 @@ import logo from "../../assets/Fude-logo.png";
 
 const DesktopMenu = ({ activeSection, onNavClick }) => {
     return (
-        <nav className="hidden md:flex items-center justify-between w-full">
+        <nav className="hidden md:flex items-center gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 3xl:gap-24 4xl:gap-28">
             {NAVBAR_OPTIONS.map((option) => {
                 const isActive = activeSection === option.link;
                 return (
@@ -13,7 +13,7 @@ const DesktopMenu = ({ activeSection, onNavClick }) => {
                         key={option.link}
                         href={`/#${option.link}`}
                         onClick={(e) => onNavClick(e, option.link)}
-                        className={`text-[14px] tracking-tight uppercase py-1 transition-all duration-300 ease-out cursor-pointer ${isActive
+                        className={`text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] 4xl:text-[24px] tracking-tight uppercase py-1 transition-all duration-300 ease-out cursor-pointer ${isActive
                                 ? "font-semibold text-[#2A2A2A] opacity-100"
                                 : "font-normal text-[#2A2A2A]/55 hover:text-[#2A2A2A] hover:opacity-100"
                             }`}
@@ -96,9 +96,9 @@ export default function Navbar() {
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="sticky top-0 z-50 bg-[#F0F0F0]/95 backdrop-blur-md px-6 lg:px-[60px]"
+            className="sticky top-0 z-50 bg-[#F0F0F0]/95 backdrop-blur-md px-6 lg:px-[60px] xl:px-20 2xl:px-28 3xl:px-36 4xl:px-44"
         >
-            <div className="w-full flex items-center justify-between h-16 md:h-20 border-b border-[#DDD]">
+            <div className="w-full flex items-center justify-between h-16 md:h-20 xl:h-24 2xl:h-28 3xl:h-32 4xl:h-40 border-b border-[#DDD]">
                 {/* Logo */}
                 <motion.img
                     src={logo}
@@ -106,12 +106,12 @@ export default function Navbar() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="w-[84px] md:w-[88px] h-[28px] md:h-[30px] object-contain cursor-pointer"
+                    className="w-[84px] md:w-[88px] xl:w-[100px] 2xl:w-[120px] 3xl:w-[140px] 4xl:w-[160px] h-[28px] md:h-[30px] xl:h-[34px] 2xl:h-[40px] 3xl:h-[48px] 4xl:h-[54px] object-contain cursor-pointer"
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 />
 
-                {/* Desktop Menu - Starts at 56% of max-w-[1320px] container */}
-                <div className="hidden md:flex items-center lg:w-[44%]">
+                {/* Desktop Menu */}
+                <div className="hidden md:flex items-center">
                     <DesktopMenu activeSection={activeSection} onNavClick={handleNavClick} />
                 </div>
 
