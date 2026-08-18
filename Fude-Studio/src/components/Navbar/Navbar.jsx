@@ -98,7 +98,7 @@ export default function Navbar() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="sticky top-0 z-50 bg-[#F0F0F0]/95 backdrop-blur-md px-6 lg:px-[60px]"
         >
-            <div className="mx-auto w-full max-w-[1320px] flex items-center justify-between h-16 md:h-20 border-b border-[#DDD]">
+            <div className="w-full flex items-center justify-between h-16 md:h-20 border-b border-[#DDD]">
                 {/* Logo */}
                 <motion.img
                     src={logo}
@@ -127,7 +127,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="absolute top-full left-0 w-full bg-[#F0F0F0]/95 backdrop-blur-lg border-b border-[#DDD] md:hidden overflow-hidden"
+                        className="absolute top-full left-0 w-full bg-[#F0F0F0] backdrop-blur-lg border-b border-[#DDD] md:hidden overflow-hidden"
                     >
                         <nav className="flex flex-col px-6 py-6 gap-4">
                             {NAVBAR_OPTIONS.map((option) => {

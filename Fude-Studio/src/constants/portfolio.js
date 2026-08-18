@@ -10,6 +10,7 @@ export const pageContent = {
     description:
         "Our portfolio showcases the creative work we deliver for ambitious brands, businesses, and organizations, combining strategic branding, graphic design, web design, and motion solutions to create meaningful visual experiences that strengthen brand identity, communicate clearly, engage audiences, and support business growth across every platform and digital touchpoint with purpose.",
     button: "View our portfolio",
+    portfolio_url: "https://fudeportfolio.com/",
     portfolio_video_url
 };
 

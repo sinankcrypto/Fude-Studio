@@ -4,16 +4,20 @@ import { heroContent, introContent } from "../constants/features";
 export default function Index() {
     return (
         <div className="min-h-screen bg-dark text-white" id="services">
-            <main className="mx-auto max-w-[1440px] px-6 py-16 sm:px-10 md:px-[60px] md:py-20">
-                <h1 className="max-w-[918px] text-2xl sm:text-3xl md:text-[40px] uppercase leading-[1.1] tracking-wide">
-                    {heroContent.text}
+            <main className="mx-auto w-full px-6 py-16 sm:px-10 md:px-[60px] md:py-20">
+                <h1 className="max-w-none text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] xl:text-[40px] uppercase leading-[1.1] tracking-wide">
+                    {heroContent.text.map((line, index) => (
+                        <span key={index} className="block xl:whitespace-nowrap">
+                            {line}
+                        </span>
+                    ))}
                 </h1>
 
                 <div className="mt-14 flex flex-col gap-6 border-t border-white/20 pt-8 md:mt-16 md:flex-row md:items-start md:justify-between md:pt-10">
-                    <p className="text-sm uppercase tracking-tight text-white">
+                    <p className="text-sm 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[26px] uppercase tracking-tight text-white">
                         {introContent.eyebrow}
                     </p>
-                    <p className="max-w-xl text-sm leading-relaxed text-white/70 sm:text-base">
+                    <p className="max-w-xl xl:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl 4xl:max-w-5xl text-sm leading-relaxed text-white/70 sm:text-base 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[26px]">
                         {introContent.description}
                     </p>
                 </div>

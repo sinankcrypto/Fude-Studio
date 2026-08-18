@@ -10,24 +10,24 @@ export default function Clients() {
     <section id="clients" className="w-full px-6 py-16 lg:px-[60px] lg:pt-[94px] lg:pb-16 overflow-hidden bg-[#EDEDED]">
       {/* Header Section - Figma Specs Aligned */}
       <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-12 lg:mb-16">
-        <div className="lg:w-[44%]">
+        <div className="lg:w-[44%] min-[2200px]:w-1/2">
           <h2 className="text-[#2A2A2A] text-[14px] font-medium uppercase tracking-[-0.03em]">
             {CLIENTS_SECTION.title}
           </h2>
         </div>
 
-        <div className="lg:w-[60%]">
-          <p className="max-w-full lg:max-w-[715px] text-lg sm:text-2xl lg:text-[30px] font-normal uppercase leading-[1.2] tracking-[-0.06em] text-[#2A2A2A]">
+        <div className="lg:w-[60%] min-[2200px]:w-1/2 min-[2200px]:flex min-[2200px]:justify-center">
+          <p className="max-w-full lg:max-w-[715px] min-[2200px]:max-w-[780px] text-lg sm:text-2xl lg:text-[30px] font-normal uppercase leading-[1.2] tracking-[-0.06em] text-[#2A2A2A]">
             {CLIENTS_SECTION.description}
           </p>
         </div>
       </div>
 
       {/* Carousels Container */}
-      <div className="flex flex-col gap-4 sm:gap-6 lg:gap-8 w-full overflow-hidden py-2">
+      <div className="flex flex-col gap-4 sm:gap-6 lg:gap-8 w-full overflow-hidden py-3">
         
         {/* Row 1: Animates to the RIGHT */}
-        <div className="w-full overflow-hidden py-3">
+        <div className="w-full">
           <motion.div
             className="flex gap-4 sm:gap-6 lg:gap-8 w-max"
             animate={{ x: ["-50%", "0%"] }}
@@ -69,7 +69,7 @@ export default function Clients() {
         </div>
 
         {/* Row 2: Animates to the LEFT */}
-        <div className="w-full overflow-hidden py-3">
+        <div className="w-full">
           <motion.div
             className="flex gap-4 sm:gap-6 lg:gap-8 w-max"
             animate={{ x: ["0%", "-50%"] }}
