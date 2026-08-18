@@ -116,7 +116,7 @@ export default function Team() {
                 className="group flex flex-col w-[240px] sm:w-[260px] shrink-0"
               >
                 {/* Role Label */}
-                <p className="text-[#2A2A2A] text-xs sm:text-sm lg:text-[15px] font-normal uppercase leading-[1.25] min-h-[48px] flex flex-col justify-end tracking-[0.08em]">
+                <h3 className="text-[#2A2A2A] text-xs sm:text-sm lg:text-[15px] font-medium uppercase leading-[1.25] min-h-[48px] flex flex-col justify-end tracking-tight">
                   {(member.role.includes("\n")
                     ? member.role.split("\n")
                     : member.role.includes(" & ")
@@ -127,7 +127,7 @@ export default function Team() {
                       {line}
                     </span>
                   ))}
-                </p>
+                </h3>
 
                 {/* Member Portrait Image */}
                 <div className="mt-3 sm:mt-4 overflow-hidden bg-neutral-200">

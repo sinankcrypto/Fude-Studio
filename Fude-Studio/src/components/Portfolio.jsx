@@ -22,9 +22,9 @@ export default function Portfolio() {
     return (
         <section className="min-h-screen bg-[#f3f2f0] px-6 lg:px-[60px] py-12 sm:py-16 lg:py-[7.1vw] text-[#2A2A2A]" id="portfolio">
             <div className="w-full">
-                <div className="mb-16 grid gap-10 md:grid-cols-[1.04fr_0.96fr] md:gap-16 lg:mb-[7.1vw] lg:gap-[9vw]">
+                <div className="mb-10 sm:mb-12 lg:mb-[4.5vw] grid gap-10 md:grid-cols-[1.04fr_0.96fr] md:gap-16 lg:gap-[9vw]">
                     <div>
-                        <h1 className="max-w-[620px] font-heading text-3xl sm:text-4xl lg:text-[48px] font-normal leading-[1.2] tracking-tight uppercase text-[#2A2A2A]">
+                        <h1 className="max-w-[620px] font-heading text-3xl sm:text-4xl lg:text-[48px] font-normal leading-[1.1] tracking-tight uppercase text-[#2A2A2A]">
                             {pageContent.heading.map((line) => (
                                 <span className="block" key={line}>
                                     {line}
@@ -32,8 +32,8 @@ export default function Portfolio() {
                             ))}
                         </h1>
                     </div>
-                    <div className="flex flex-col justify-end md:pb-1 pr-[10%] font-body pt-[5%]">
-                        <p className="mb-7 text-[12px] leading-[130%] text-[#6d6b67] sm:text-[16px] ">
+                    <div className="flex flex-col justify-end md:pb-1 font-body pt-2 md:pt-0">
+                        <p className="mb-7 text-[12px] leading-[1.25] text-[#6d6b67] sm:text-[14px] tracking-tight">
                             {pageContent.description}
                         </p>
                         <a
