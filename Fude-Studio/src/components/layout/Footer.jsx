@@ -159,13 +159,13 @@ function Footer() {
             BOTTOM BAR
             ======================================== */}
 
-        <div className="flex flex-col gap-6 py-6 text-xs uppercase text-[#9A9A9A] sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-row items-center justify-between gap-4 py-6 text-xs uppercase text-[#9A9A9A]">
           <p>©2026 Fude Studio. All rights reserved.</p>
 
           <button
             type="button"
             onClick={handleBackToTop}
-            className="text-left transition-opacity hover:opacity-60 sm:text-right uppercase"
+            className="text-right transition-opacity hover:opacity-60 uppercase shrink-0"
           >
             Back to top
           </button>
@@ -178,7 +178,7 @@ function Footer() {
 
       <div
         aria-hidden="true"
-        className="select-none whitespace-nowrap pl-1 text-[16vw] font-medium uppercase leading-none tracking-tight text-[#2D2D2D] translate-y-[25%]"
+        className="hidden md:block select-none whitespace-nowrap pl-1 text-[16vw] font-medium uppercase leading-none tracking-tight text-[#2D2D2D] translate-y-[25%]"
       >
         Fude Studio
       </div>
