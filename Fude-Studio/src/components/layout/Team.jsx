@@ -11,7 +11,6 @@ export default function Team() {
   // Start virtualIndex at middle set
   const [virtualIndex, setVirtualIndex] = useState(totalMembers);
   const [stepWidth, setStepWidth] = useState(330);
-  const [isHovered, setIsHovered] = useState(false);
 
   const trackRef = useRef(null);
   const cardRef = useRef(null);
@@ -31,17 +30,6 @@ export default function Team() {
     window.addEventListener("resize", updateStepWidth);
     return () => window.removeEventListener("resize", updateStepWidth);
   }, []);
-
-  // Auto-advance by 1 card length at regular time interval
-  useEffect(() => {
-    if (isHovered) return;
-
-    const timer = setInterval(() => {
-      handleNext();
-    }, 4000);
-
-    return () => clearInterval(timer);
-  }, [virtualIndex, isHovered]);
 
   const handleNext = () => {
     setVirtualIndex((prev) => prev + 1);
@@ -63,22 +51,18 @@ export default function Team() {
   return (
     <section id="team" className="w-full px-6 py-16 lg:px-16 lg:py-24 overflow-hidden bg-[#EDEDED]">
       {/* Section Header - Crisp Figma Typography */}
-      <div className="max-w-4xl">
+      <div className="max-w-6xl">
         <h2 className="text-[#2A2A2A] text-3xl sm:text-4xl lg:text-[48px] font-normal uppercase leading-[1.1] tracking-normal">
           {TEAM_SECTION.title}
         </h2>
 
-        <p className="mt-4 sm:mt-5 text-[#717171] text-base lg:text-[16px] font-normal leading-[1.3] max-w-3xl tracking-tight">
+        <p className="mt-4 sm:mt-5 text-[#717171] text-base 3xl:text-[20px] font-normal leading-[1.3] tracking-tight">
           {TEAM_SECTION.description}
         </p>
       </div>
 
       {/* Team Carousel Container with Minimal Left/Right Arrows */}
-      <div
-        className="relative w-full mt-12 lg:mt-16"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+      <div className="relative w-full mt-12 lg:mt-16">
         {/* Minimal Left Arrow Button */}
         <button
           onClick={handlePrev}
