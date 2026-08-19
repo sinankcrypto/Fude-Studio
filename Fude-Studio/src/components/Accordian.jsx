@@ -12,20 +12,26 @@ function ToggleIcon() {
 }
 
 export default function ServicesAccordion() {
-    const [openNumber, setOpenNumber] = useState(services[0].number);
+    const [openNumbers, setOpenNumbers] = useState([services[0].number]);
+    const prevOpenNumbers = useRef(openNumbers);
     const itemRefs = useRef({});
     const hasUserInteracted = useRef(false);
 
     useEffect(() => {
         if (!hasUserInteracted.current) {
+            prevOpenNumbers.current = openNumbers;
             return;
         }
 
-        if (openNumber) {
-            // A delay allows the collapsing accordion's height layout change to begin
+        // Find the newly opened item (in openNumbers but not in prevOpenNumbers)
+        const newlyOpened = openNumbers.find((num) => !prevOpenNumbers.current.includes(num));
+        prevOpenNumbers.current = openNumbers;
+
+        if (newlyOpened) {
+            // A delay allows the expanding accordion's height layout change to begin
             // so we target the correct viewport scroll position.
             const timer = setTimeout(() => {
-                const element = itemRefs.current[openNumber];
+                const element = itemRefs.current[newlyOpened];
                 if (element) {
                     if (window.lenis) {
                         window.lenis.scrollTo(element, {
@@ -43,17 +49,16 @@ export default function ServicesAccordion() {
             }, 200);
             return () => clearTimeout(timer);
         }
-    }, [openNumber]);
+    }, [openNumbers]);
 
     return (
         <AccordionPrimitive.Root
-            type="single"
-            value={openNumber}
+            type="multiple"
+            value={openNumbers}
             onValueChange={(val) => {
                 hasUserInteracted.current = true;
-                setOpenNumber(val);
+                setOpenNumbers(val);
             }}
-            collapsible
             className="divide-y divide-white/20 border-y border-white/20"
         >
             {services.map((service) => {
