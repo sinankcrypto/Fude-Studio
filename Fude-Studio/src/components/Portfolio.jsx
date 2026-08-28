@@ -40,16 +40,16 @@ export default function Portfolio() {
                             href={pageContent.portfolio_url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative flex w-fit items-center gap-3 overflow-hidden rounded-full bg-[#1b1b1b] px-6 py-2.5 text-[14px] font-extralight uppercase text-[#F0F0F0] visited:text-[#F0F0F0] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-dark focus:ring-offset-2"
+                            className="group relative flex w-fit items-center gap-2.5 overflow-hidden rounded-full bg-[#1b1b1b] px-4.5 py-2 text-xs sm:text-[13px] font-extralight uppercase text-[#F0F0F0] visited:text-[#F0F0F0] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-dark focus:ring-offset-2"
                         >
                             {/* Animated Background Sweep */}
                             <span className="absolute inset-0 z-0 bg-dark scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100" />
 
                             {/* Content Wrapper */}
-                            <span className="relative z-10 flex items-center gap-3 tracking-tight text-[#F0F0F0]">
-                                <span className="relative overflow-hidden flex h-5 w-5 items-center justify-center shrink-0">
-                                    <ArrowRight size={18} strokeWidth={1.5} className="text-[#F0F0F0] transition-transform duration-300 ease-out group-hover:translate-x-5 absolute" />
-                                    <ArrowRight size={18} strokeWidth={1.5} className="text-[#F0F0F0] transition-transform duration-300 ease-out -translate-x-5 group-hover:translate-x-0 absolute" />
+                            <span className="relative z-10 flex items-center gap-2.5 tracking-tight text-[#F0F0F0]">
+                                <span className="relative overflow-hidden flex h-4 w-4 items-center justify-center shrink-0">
+                                    <ArrowRight size={15} strokeWidth={1.5} className="text-[#F0F0F0] transition-transform duration-300 ease-out group-hover:translate-x-4 absolute" />
+                                    <ArrowRight size={15} strokeWidth={1.5} className="text-[#F0F0F0] transition-transform duration-300 ease-out -translate-x-4 group-hover:translate-x-0 absolute" />
                                 </span>
                                 {pageContent.button}
                             </span>

@@ -100,7 +100,7 @@ export default function ServicesAccordion() {
                                                     <h3 className="text-lg uppercase tracking-tight text-white sm:text-xl">
                                                         {item.title}
                                                     </h3>
-                                                    <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/70 sm:text-base">
+                                                    <p className="mt-3 max-w-xl text-sm leading-[1.3] text-white/70 sm:text-base tracking-tight">
                                                         {item.description}
                                                     </p>
                                                 </div>
