@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="about"
-      className="w-full bg-[#F0F0F0] px-6 lg:px-[60px] pt-10 pb-12 lg:pt-[56px] lg:pb-[48px]"
+      className="w-full bg-[#F0F0F0] px-6 py-5 sm:pt-10 sm:pb-12 lg:px-[60px] lg:pt-[56px] lg:pb-[48px]"
     >
       <div className="w-full flex flex-col gap-8 lg:gap-[28px]">
         {/* Main Heading: Matches 966px Figma width */}
@@ -27,7 +27,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: [0.215, 0.61, 0.355, 1] }}
           className="w-full flex justify-start md:ml-[35%] md:max-w-[380px] lg:ml-[48%] lg:max-w-[440px] xl:ml-[56%] xl:max-w-[480px] 2xl:max-w-[580px] min-[2200px]:w-1/2 min-[2200px]:ml-auto min-[2200px]:justify-center min-[2200px]:max-w-none"
         >
-          <p className="w-full min-[2200px]:max-w-[620px] text-xs sm:text-sm lg:text-[15px] 2xl:text-[18px] min-[2200px]:text-[22px] font-normal uppercase leading-[1.3] tracking-tight lg:tracking-[-0.03em] text-[#2A2A2A]">
+          <p className="w-full min-[2200px]:max-w-[620px] text-sm sm:text-base font-normal uppercase leading-[1.3] tracking-tight text-[#2A2A2A]">
             {HERO_CONTENT.subtitle}
           </p>
         </motion.div>
