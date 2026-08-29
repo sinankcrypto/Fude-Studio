@@ -27,11 +27,11 @@ function Footer() {
             CTA + ACTION BUTTONS + SOCIALS / LINK GROUPS
             ======================================== */}
 
-        <div className="flex flex-col gap-12 border-b border-[#3E3A3A] py-16 lg:flex-row lg:justify-between lg:py-24">
+        <div className="flex flex-col gap-8 sm:gap-12 border-b border-[#3E3A3A] py-5 sm:py-12 md:py-16 lg:flex-row lg:justify-between lg:py-24">
           {/* Left: CTA heading, action buttons, socials */}
           <div className="flex max-w-full sm:max-w-none lg:w-[45%] xl:w-[42%] flex-col justify-between gap-8 sm:gap-10">
             <div className="space-y-7">
-              <h2 className="text-[16px] min-[360px]:text-[18px] min-[400px]:text-[20px] sm:text-[24px] md:text-[26px] lg:text-[26px] 2xl:text-[40px] font-normal uppercase leading-[1.15] tracking-tighter text-[#F0F0F0]">
+              <h2 className="text-[16px] min-[360px]:text-[18px] min-[400px]:text-[20px] sm:text-[24px] md:text-[26px] lg:text-[26px] 2xl:text-[35px] font-normal uppercase leading-[1.15] tracking-tight text-[#F0F0F0]">
                 {Array.isArray(FOOTER_CTA.heading)
                   ? FOOTER_CTA.heading.map((line, idx) => (
                     <span key={idx} className="block whitespace-nowrap">
@@ -120,7 +120,7 @@ function Footer() {
                 Business enquiries
               </SectionLabel>
 
-              <div className="mt-1 space-y-0.5 text-xs sm:text-sm font-normal uppercase tracking-tight text-[#F0F0F0] leading-tight">
+              <div className="mt-1 space-y-2 text-xs sm:text-sm font-normal uppercase tracking-tight text-[#F0F0F0] leading-tight">
                 <a
                   href={`mailto:${FOOTER_CONTACT.email}`}
                   className="block transition-opacity hover:opacity-60"
@@ -147,7 +147,7 @@ function Footer() {
 
               <div className="mt-1 max-w-[240px] text-xs sm:text-sm font-normal uppercase leading-tight tracking-tight text-[#F0F0F0] space-y-3">
                 {FOOTER_CONTACT.location.map((loc, idx) => (
-                  <span key={idx} className="block">
+                  <span key={idx} className="block space-y-1">
                     {loc.split(',').map((part, pIdx, arr) => (
                       <span key={pIdx} className="block">
                         {part.trim()}{pIdx < arr.length - 1 && ','}
@@ -164,13 +164,13 @@ function Footer() {
             BOTTOM BAR
             ======================================== */}
 
-        <div className="flex flex-row items-center justify-between gap-4 py-6 text-xs uppercase text-[#9A9A9A]">
-          <p>©2026 Fude Studio. All rights reserved.</p>
+        <div className="flex flex-row items-center justify-between gap-4 pt-6 pb-1 text-xs uppercase text-[#9A9A9A]">
+          <p className="text-xs uppercase">©2026 Fude Studio. All rights reserved.</p>
 
           <button
             type="button"
             onClick={handleBackToTop}
-            className="text-right transition-opacity hover:opacity-60 uppercase shrink-0"
+            className="text-right text-xs uppercase transition-opacity hover:opacity-60 shrink-0 cursor-pointer"
           >
             Back to top
           </button>
@@ -183,7 +183,7 @@ function Footer() {
 
       <div
         aria-hidden="true"
-        className="hidden md:block w-full text-center select-none whitespace-nowrap text-[16vw] font-medium uppercase leading-none tracking-tight text-[#2D2D2D] translate-y-[25%]"
+        className="hidden md:block w-full text-center select-none whitespace-nowrap text-[16vw] font-medium uppercase leading-none tracking-tight text-[#2D2D2D] -mt-4 lg:-mt-6 translate-y-[20%]"
       >
         Fude Studio
       </div>
