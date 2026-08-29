@@ -104,8 +104,8 @@ export default function Team() {
                   {(member.role.includes("\n")
                     ? member.role.split("\n")
                     : member.role.includes(" & ")
-                    ? member.role.split(" & ").map((part, idx, arr) => (idx < arr.length - 1 ? `${part} &` : part))
-                    : [member.role]
+                      ? member.role.split(" & ").map((part, idx, arr) => (idx < arr.length - 1 ? `${part} &` : part))
+                      : [member.role]
                   ).map((line, i) => (
                     <span key={i} className="block">
                       {line}
