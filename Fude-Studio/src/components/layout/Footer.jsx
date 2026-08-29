@@ -27,7 +27,7 @@ function Footer() {
             CTA + ACTION BUTTONS + SOCIALS / LINK GROUPS
             ======================================== */}
 
-        <div className="flex flex-col gap-8 sm:gap-12 border-b border-[#3E3A3A] py-5 sm:py-12 md:py-16 lg:flex-row lg:justify-between lg:py-24">
+        <div className="flex flex-col gap-8 sm:gap-12 border-b border-[#3E3A3A] py-8 sm:py-12 md:py-16 lg:flex-row lg:justify-between lg:py-24">
           {/* Left: CTA heading, action buttons, socials */}
           <div className="flex max-w-full sm:max-w-none lg:w-[45%] xl:w-[42%] flex-col justify-between gap-8 sm:gap-10">
             <div className="space-y-7">

@@ -7,7 +7,7 @@ export default function Clients() {
   const row2Duplicated = [...CLIENTS_ROW_2, ...CLIENTS_ROW_2, ...CLIENTS_ROW_2, ...CLIENTS_ROW_2];
 
   return (
-    <section id="clients" className="w-full px-6 py-5 sm:py-12 md:py-16 lg:px-[60px] lg:pt-[94px] lg:pb-16 overflow-hidden bg-[#EDEDED]">
+    <section id="clients" className="w-full px-6 py-8 sm:py-12 md:py-16 lg:px-[60px] lg:pt-[94px] lg:pb-16 overflow-hidden bg-[#EDEDED]">
       {/* Header Section - Figma Specs Aligned */}
       <div className="w-full flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-0 mb-12 lg:mb-16">
         <div className="w-full lg:w-[45%]">
