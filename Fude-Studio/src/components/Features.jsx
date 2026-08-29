@@ -15,12 +15,12 @@ export default function Index() {
 
                 <div className="mt-14 flex flex-col gap-6 border-t border-white/20 pt-8 md:mt-16 md:flex-row md:items-start md:justify-between md:pt-10">
                     <div className="w-full md:w-[46%] lg:w-[50%] shrink-0">
-                        <p className="text-sm 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[26px] uppercase tracking-tighter text-white">
+                        <p className="text-sm uppercase tracking-tight text-white sm:text-base">
                             {introContent.eyebrow}
                         </p>
                     </div>
                     <div className="w-full md:w-[54%] lg:w-[50%] flex justify-start">
-                        <p className="max-w-[580px] xl:max-w-[640px] 2xl:max-w-[720px] text-sm leading-[1.3] text-white/70 sm:text-base 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[26px] tracking-tighter px-0 md:px-3 lg:px-5">
+                        <p className="max-w-[580px] xl:max-w-[640px] text-sm leading-[1.3] text-white/70 sm:text-base tracking-tight px-0 md:px-3 lg:px-5">
                             {introContent.description}
                         </p>
                     </div>

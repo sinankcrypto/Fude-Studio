@@ -82,7 +82,7 @@ html {
   scroll-padding-top: 80px; /* Matching mobile header height h-20 */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1050px) {
   html {
     scroll-padding-top: 96px; /* Matching desktop header height h-24 */
   }
