@@ -17,7 +17,7 @@ export default function Video() {
     return (
         <section
             ref={containerRef}
-            className="w-full bg-[#F0F0F0] sm:bg-transparent px-6 sm:px-0 pb-12 sm:pb-0"
+            className="w-full bg-[#F0F0F0] sm:bg-transparent px-6 sm:px-0 pb-5 sm:pb-0"
         >
             <div className="w-full relative overflow-hidden bg-[#759560] aspect-[1.72/1] sm:aspect-auto sm:min-h-[650px] md:min-h-[750px] lg:min-h-[820px] flex items-center justify-center">
                 {/* Background Skincare Video with Parallax and Hover Zoom */}

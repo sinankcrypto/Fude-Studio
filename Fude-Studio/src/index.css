@@ -102,15 +102,17 @@ h1, h2, h3, h4, h5, h6, .font-heading, .font-header {
   font-family: var(--font-heading), sans-serif;
 }
 
-@media (min-width: 1280px) {
-  p {
-    font-size: 16px;
+@layer base {
+  @media (min-width: 1280px) {
+    p {
+      font-size: 16px;
+    }
   }
-}
 
-@media (min-width: 1920px) {
-  p {
-    font-size: 18px;
+  @media (min-width: 1920px) {
+    p {
+      font-size: 18px;
+    }
   }
 }
 

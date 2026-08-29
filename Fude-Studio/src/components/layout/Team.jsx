@@ -49,7 +49,7 @@ export default function Team() {
   };
 
   return (
-    <section id="team" className="w-full px-6 py-16 lg:px-16 lg:py-24 overflow-hidden bg-[#EDEDED]">
+    <section id="team" className="w-full px-6 py-5 sm:py-12 md:py-14 lg:px-16 lg:py-20 overflow-hidden bg-[#EDEDED]">
       {/* Section Header - Crisp Figma Typography */}
       <div className="max-w-6xl">
         <h2 className="text-[#2A2A2A] text-3xl sm:text-4xl lg:text-[48px] font-normal uppercase leading-[1.1] tracking-normal">
