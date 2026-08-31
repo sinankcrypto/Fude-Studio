@@ -20,9 +20,9 @@ function PortfolioShowcase() {
 
 export default function Portfolio() {
     return (
-        <section className="bg-[#f3f2f0] px-6 py-5 sm:py-12 md:py-16 lg:px-[60px] lg:py-[7.1vw] text-[#2A2A2A]" id="portfolio">
+        <section className="bg-[#f3f2f0] px-6 py-8 sm:py-12 md:py-16 lg:px-[60px] lg:py-[7.1vw] text-[#2A2A2A]" id="portfolio">
             <div className="w-full">
-                <div className="mb-6 sm:mb-10 lg:mb-[4.5vw] grid gap-6 sm:gap-10 md:grid-cols-[1.04fr_0.96fr] md:gap-16 lg:gap-[9vw] items-start">
+                <div className="mb-6 sm:mb-10 lg:mb-[4.5vw] grid gap-3 sm:gap-6 md:grid-cols-[1.04fr_0.96fr] md:gap-16 lg:gap-[9vw] items-start">
                     <div>
                         <h1 className="max-w-[620px] font-heading text-3xl sm:text-4xl lg:text-[48px] font-normal leading-[1.1] tracking-tight uppercase text-[#2A2A2A]">
                             {pageContent.heading.map((line) => (

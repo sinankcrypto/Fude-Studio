@@ -49,20 +49,20 @@ export default function Team() {
   };
 
   return (
-    <section id="team" className="w-full px-6 py-5 sm:py-12 md:py-14 lg:px-16 lg:py-20 overflow-hidden bg-[#EDEDED]">
+    <section id="team" className="w-full px-6 py-8 sm:py-12 md:py-14 lg:px-16 lg:py-20 overflow-hidden bg-[#EDEDED]">
       {/* Section Header - Crisp Figma Typography */}
       <div className="max-w-6xl">
         <h2 className="text-[#2A2A2A] text-3xl sm:text-4xl lg:text-[48px] font-normal uppercase leading-[1.1] tracking-normal">
           {TEAM_SECTION.title}
         </h2>
 
-        <p className="mt-4 sm:mt-5 text-[#717171] text-base 3xl:text-[20px] font-normal leading-[1.3] tracking-tighter">
+        <p className="mt-4 sm:mt-5 text-[#717171] text-sm sm:text-base 3xl:text-[20px] font-normal leading-[1.3] tracking-tighter">
           {TEAM_SECTION.description}
         </p>
       </div>
 
       {/* Team Carousel Container with Minimal Left/Right Arrows */}
-      <div className="relative w-full mt-12 lg:mt-16">
+      <div className="relative w-full mt-6 sm:mt-8 md:mt-10 lg:mt-16">
         {/* Minimal Left Arrow Button */}
         <button
           onClick={handlePrev}

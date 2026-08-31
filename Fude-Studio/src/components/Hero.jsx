@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="about"
-      className="w-full bg-[#F0F0F0] px-6 py-5 sm:pt-10 sm:pb-12 lg:px-[60px] lg:pt-[56px] lg:pb-[48px]"
+      className="w-full bg-[#F0F0F0] px-6 py-8 sm:pt-10 sm:pb-12 lg:px-[60px] lg:pt-[56px] lg:pb-[48px]"
     >
       <div className="w-full flex flex-col gap-8 lg:gap-[28px]">
         {/* Main Heading: Matches 966px Figma width */}

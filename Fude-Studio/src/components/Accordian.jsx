@@ -33,9 +33,11 @@ export default function ServicesAccordion() {
             const timer = setTimeout(() => {
                 const element = itemRefs.current[newlyOpened];
                 if (element) {
+                    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                    const targetScroll = elementPosition - 120; // Offset to keep it below the sticky navbar
+
                     if (window.lenis) {
-                        window.lenis.scrollTo(element, {
-                            offset: -120, // Offset to keep it below the sticky navbar
+                        window.lenis.scrollTo(targetScroll, {
                             duration: 1.2,
                             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
                         });
