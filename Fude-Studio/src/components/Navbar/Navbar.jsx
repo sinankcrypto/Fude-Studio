@@ -68,9 +68,11 @@ export default function Navbar() {
                 return;
             }
 
-            // Reference point in viewport: accounts for 64px mobile / 80px desktop navbar + padding
-            const referencePoint = window.innerWidth < 1050 ? 75 : 100;
+            const navbarHeight = window.innerWidth < 1050 ? 64 : 80;
+            const viewportTop = navbarHeight;
+            const viewportBottom = window.innerHeight;
 
+            let maxVisibleHeight = 0;
             let currentActive = NAVBAR_OPTIONS[0].link;
 
             for (let i = 0; i < NAVBAR_OPTIONS.length; i++) {
@@ -78,7 +80,13 @@ export default function Navbar() {
                 const element = document.getElementById(sectionId);
                 if (element) {
                     const rect = element.getBoundingClientRect();
-                    if (rect.top <= referencePoint) {
+                    // Calculate the visible height of the section in the viewport below the navbar
+                    const visibleTop = Math.max(rect.top, viewportTop);
+                    const visibleBottom = Math.min(rect.bottom, viewportBottom);
+                    const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+
+                    if (visibleHeight > maxVisibleHeight) {
+                        maxVisibleHeight = visibleHeight;
                         currentActive = sectionId;
                     }
                 }
@@ -111,19 +119,37 @@ export default function Navbar() {
 
         const element = document.getElementById(link);
         if (element) {
-            const offsetValue = window.innerWidth < 1050 ? -64 : -80;
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+            
+            let targetScroll = 0;
+            if (link !== 'about') {
+                let paddingTop = 0;
+                const computedStyle = window.getComputedStyle(element);
+                const elementPadding = parseFloat(computedStyle.paddingTop) || 0;
+                if (elementPadding > 0) {
+                    paddingTop = elementPadding;
+                } else if (element.firstElementChild) {
+                    const childStyle = window.getComputedStyle(element.firstElementChild);
+                    paddingTop = parseFloat(childStyle.paddingTop) || 0;
+                }
+                
+                const navbarHeight = window.innerWidth < 1050 ? 64 : 80;
+                // Scroll past the top padding so content aligns 24px below the navbar
+                targetScroll = elementPosition + paddingTop - navbarHeight - 24;
+                targetScroll = Math.max(0, targetScroll);
+            }
+
             if (window.lenis) {
-                window.lenis.scrollTo(element, {
-                    offset: offsetValue,
+                window.lenis.scrollTo(targetScroll, {
                     onComplete: () => {
                         isManualScrollRef.current = false;
+                        if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
                         setActiveSection(link);
                     },
                 });
             } else {
-                const elementPosition = element.getBoundingClientRect().top + window.scrollY;
                 window.scrollTo({
-                    top: elementPosition + offsetValue,
+                    top: targetScroll,
                     behavior: "smooth",
                 });
             }
@@ -159,6 +185,7 @@ export default function Navbar() {
                             window.lenis.scrollTo(0, {
                                 onComplete: () => {
                                     isManualScrollRef.current = false;
+                                    if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
                                     setActiveSection("about");
                                 },
                             });
